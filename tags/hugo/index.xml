@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Menghao blog</title>
+    <link>https://mengwoods.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 28 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build Personal Blog with Hugo</title>
+      <link>https://mengwoods.github.io/post/tech/000-build-hugo-site/en/</link>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/000-build-hugo-site/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Hugo, blog&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

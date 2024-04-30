@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Menghao blog</title>
+    <link>https://mengwoods.github.io/series/</link>
+    <description>Recent content in Series on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright><atom:link href="https://mengwoods.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Menghao blog</title>
+    <link>https://mengwoods.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dockerfile records</title>
+      <link>https://mengwoods.github.io/post/tech/002-run-conda-in-dockerfile/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/002-run-conda-in-dockerfile/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Dockerfile examples&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Some Useful Docker Commands</title>
+      <link>https://mengwoods.github.io/post/tech/003-some-docker-commands/en/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/003-some-docker-commands/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;The blog collects some useful Docker commands.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

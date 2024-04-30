@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Menghao blog</title>
+    <link>https://mengwoods.github.io/cn/categories/code/</link>
+    <description>Recent content in Code on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; 常用容器以及一些应用案例</title>
+      <link>https://mengwoods.github.io/cn/post/code/002-c&#43;&#43;-containers/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/code/002-c&#43;&#43;-containers/</guid>
+      <description>
+        
+          
+            &lt;p&gt;介绍一些我常用的C++容器和使用方法，以及使用案例。&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-figures=""
+  
+    class="page"
+  
+  
+  >
+  <head>
+<title>Detailed Deep Derivation of Principle Components Analysis (PCA) | Menghao blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1C01SX1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7L1C01SX1E');
+</script>
+
+
+
+
+
+<meta property="og:locale" content="en" />
+
+<meta property="og:locale:alternate" content="cn" />
+
+<meta property="og:type" content="article">
+<meta name="description" content="Based on Deep Learning (2017, MIT) book." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@janedoe">
+<meta name="twitter:title" content="Detailed Deep Derivation of Principle Components Analysis (PCA)" />
+<meta name="twitter:image" content="https://mengwoods.github.io/images/thumbnail.png"/>
+<meta property="og:url" content="https://mengwoods.github.io/post/math/003-pca/" />
+<meta property="og:title" content="Detailed Deep Derivation of Principle Components Analysis (PCA)" />
+<meta property="og:description" content="Based on Deep Learning (2017, MIT) book." />
+<meta property="og:image" content="https://mengwoods.github.io/images/thumbnail.png" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://mengwoods.github.io/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mengwoods.github.io/icons/favicon-32x32.png">
+<link rel="manifest" href="https://mengwoods.github.io/icons/site.webmanifest">
+
+<link rel="canonical" href="https://mengwoods.github.io/post/math/003-pca/">
+
+
+
+<link rel="preload" href="https://mengwoods.github.io/css/styles.42e2c5f6d8cf9c52872666f8d8b2678ad0c426978b9d78aff3c33b7a1e7f6f97f54bcdaf0518a25fb0fe26367d04f8b07c683b3b38b331cb098daadee06b1f3e.css" integrity = "sha512-QuLF9tjPnFKHJmb42LJnitDEJpeLnXiv88M7eh5/b5f1S82vBRiiX7D&#43;JjZ9BPiwfGg7OzizMcsJjare4GsfPg==" as="style" crossorigin="anonymous">
+
+
+
+<link rel="preload" href="https://mengwoods.github.io/en/js/bundle.355cf69c98ebdc2dfd538b625fe47ecdcb4e20c2138f80e51cf5425011e8235debe8bf35913e718ee1c24fd71d1f40c12f73985c98cc237a2996520f768509af.js" as="script" integrity=
+"sha512-NVz2nJjr3C39U4tiX&#43;R&#43;zctOIMITj4DlHPVCUBHoI13r6L81kT5xjuHCT9cdH0DBL3OYXJjMI3opllIPdoUJrw==" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="https://mengwoods.github.io/css/styles.42e2c5f6d8cf9c52872666f8d8b2678ad0c426978b9d78aff3c33b7a1e7f6f97f54bcdaf0518a25fb0fe26367d04f8b07c683b3b38b331cb098daadee06b1f3e.css" integrity="sha512-QuLF9tjPnFKHJmb42LJnitDEJpeLnXiv88M7eh5/b5f1S82vBRiiX7D&#43;JjZ9BPiwfGg7OzizMcsJjare4GsfPg==" crossorigin="anonymous">
+
+  </head>
+  <body
+    data-code="7"
+    data-lines="false"
+    id="documentTop"
+    data-lang="en"
+  >
+
+<header class="nav_header" >
+  <nav class="nav"><a href='https://mengwoods.github.io/' class="nav_brand nav_item" title="Menghao blog">
+  <img src="https://mengwoods.github.io/logos/logo.png" class="logo" alt="Menghao blog">
+  <div class="nav_close">
+    <div><svg class="icon">
+  <title>open-menu</title>
+  <use xlink:href="#open-menu"></use>
+</svg>
+<svg class="icon">
+  <title>closeme</title>
+  <use xlink:href="#closeme"></use>
+</svg>
+</div>
+  </div>
+</a>
+
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/" class="nav_item" title="Home">Home </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/categories/math/" class="nav_item" title="Math">Math </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/categories/dl/" class="nav_item" title="DL">DL </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/categories/tech/" class="nav_item" title="Tech">Tech </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/categories/code/" class="nav_item" title="Code">Code </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/categories/hobby/" class="nav_item" title="Hobby">Hobby </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://mengwoods.github.io/about/" class="nav_item" title="About">About </a>
+  </div>
+      
+      <div class="nav_parent">
+        <a href="#" class="nav_item">🌐</a>
+        <div class="nav_sub">
+          <span class="nav_child"></span>
+          
+          <a href="https://mengwoods.github.io/" class="nav_child nav_item">English</a>
+          
+          <a href="https://mengwoods.github.io/cn/" class="nav_child nav_item">Chinese</a>
+          
+        </div>
+      </div>
+<div class='follow'>
+  <a href="https://github.com/MengWoods">
+    <svg class="icon">
+  <title>github</title>
+  <use xlink:href="#github"></use>
+</svg>
+
+  </a>
+  <a href="https://www.linkedin.com/in/wumenghao/">
+    <svg class="icon">
+  <title>linkedin</title>
+  <use xlink:href="#linkedin"></use>
+</svg>
+
+  </a>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
+</header>
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">Detailed Deep Derivation of Principle Components Analysis (PCA)</h1>
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      Apr 11, 2024</span>
+    <span class="post_time"> · 7 min read</span>
+    <span class="page_only">&nbsp;·
+  <div class="post_share">
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Detailed%20Deep%20Derivation%20of%20Principle%20Components%20Analysis%20%28PCA%29&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+      <svg class="icon">
+  <title>twitter</title>
+  <use xlink:href="#twitter"></use>
+</svg>
+
+    </a>
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca%2f&t=Detailed%20Deep%20Derivation%20of%20Principle%20Components%20Analysis%20%28PCA%29" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+      <svg class="icon">
+  <title>facebook</title>
+  <use xlink:href="#facebook"></use>
+</svg>
+
+    </a>
+    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
+      <svg class="icon">
+  <title>linkedin</title>
+  <use xlink:href="#linkedin"></use>
+</svg>
+
+    </a>
+    <a href="https://mengwoods.github.io/post/math/003-pca/" title="Copy Link" class="link link_yank">
+      <svg class="icon">
+  <title>copy</title>
+  <use xlink:href="#copy"></use>
+</svg>
+
+    </a>
+  </div>
+  </span>
+  </div>
+
+      <div class="post_toc">
+        <h2>Overview</h2>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-overview">1 Overview</a></li>
+    <li><a href="#2-backgroud-mathmetic-knowledge">2 Backgroud Mathmetic Knowledge</a></li>
+    <li><a href="#3-detailed-pca-derivation">3 Detailed PCA Derivation</a></li>
+    <li><a href="#4-summary">4 Summary</a></li>
+  </ul>
+</nav>
+      </div>
+    
+    <div class="post_body"><p>Based on <em>Deep Learning (2017, MIT)</em> book.</p>
+<h2 id="1-overview">1 Overview</h2>
+<p>Mordern dataset such as web indexing, high resolution image, meteorology, experimental measurement, etc., often contains high dimensionality features that they can be unclear, redundant, or even deceptive. It is challenging to visualize and interpret the relationships between variables, and the trained neural netwokr models with such high dimensionaly data are tend to overfitting (<strong>curse of dimensionality</strong>).
+Principle Components Analysis (PCA) is one simple but powerful <strong>unsupervised machine learning technique</strong> for data dimensionality reduction.
+It aims to extract a smaller dataset from a large variable set while preserving as much origin information and feature as possible (<strong>lossy compression</strong>). PCA helps identify the most significant and meaningful features in a dataset, making the data easy for visualization. The applications includes: statistical, noise removal, and prepocessing data for machine learning algorihtms.</p>
+<ul>
+<li>What is principle component?<br>
+Principal components are new variables that are constructed as linear combinations of the origin variables. These new variables are uncorrelated and contain the most of the information from the original data.</li>
+</ul>
+<h2 id="2-backgroud-mathmetic-knowledge">2 Backgroud Mathmetic Knowledge</h2>
+<p>Those knowledge is required for next section.</p>
+<ul>
+<li>Orthogonal vector and matrix:
+<ul>
+<li>Two vectors are orthogonal if they are perpendicular to each other. i.e. the dot product of the two vectors is zero.</li>
+<li>Orthogonal matrix square matrix in which its rows and columns are mutually orthogonal unit vectors; Every two rows and two columns have zero dot product, and every row and every column has a magnitude of one.</li>
+<li>$A$ is orthogonal matrix if $A^{T} = A^{-1}$ or $AA^{T}= A^{T}A = I$.</li>
+<li>In robotics, a rotation matrix is typical a $3\times3$ orthogonal matrix, in spatial transformation it rotates vector's direction but keeps the magnitude of origin vector.</li>
+</ul>
+</li>
+<li>Matrix, vector multiplication rules:
+<ul>
+<li>$(AB)^T=B^TA^T$, transpose of the product of two matrices.</li>
+<li>$\vec{a}^T\vec{b}=\vec{b}^T\vec{a}$, both results are scalars, scalar's transpose is same.</li>
+<li>$(A + B)C = AC + BC$, multiplication is distributive.</li>
+<li>$AB \not ={} BA$, multiplication is not commutative.</li>
+<li>$A(BC)=(AB)C$, multiplication is associative.</li>
+</ul>
+</li>
+<li>Symmetric matrix:
+<ul>
+<li>$A=A^T$, $A$ is a symmetric matrix.</li>
+<li>$X^TX$ is a symmetric matrix, since $(X^TX)^T=X^TX$.</li>
+</ul>
+</li>
+<li>Vector derivatives rules ($B$ is constant matrix):
+<ul>
+<li>$d(x^TB)/dx=B$</li>
+<li>$d(x^Tx)/dx=2x$</li>
+<li>$d(x^TBx)/dx=2Bx$</li>
+</ul>
+</li>
+<li>Matrix trace rules:
+<ul>
+<li>$Tr(A)=Tr(A^T)$</li>
+<li>$Tr(AB)=Tr(BA)$</li>
+<li>$Tr(A)=\sum_i{\lambda_i}$, where $\lambda$ is eigen values of $A$.</li>
+<li>The trace is invariant under circular shifts: $Tr(ABCD)=Tr(BCDA)=Tr(CDAB)=Tr(DABC)$</li>
+</ul>
+</li>
+<li>Vector and matrix norms:
+<ul>
+<li>Vector's $L^2$ norm, also known as Euclidean norm: $||x||_2=\sqrt{\sum_i|x_i|^2}$.</li>
+<li>It is also common to measure the size of a vector using the squraed $L^2$ norm, which can be calculated as $x^Tx$.</li>
+<li>Frobenius norm is used to measure the size of a matrix: $||A||<em>F=\sqrt{\sum</em>{i,j}A^2_{i,j}}$</li>
+<li>Frobenius norm is square root of the sum of the absolute squares of all matrix's elements.</li>
+<li>Frobenius norm is the matrix version Euclidean norm.</li>
+</ul>
+</li>
+<li>Eigendecomposition and eigenvalue:
+<ul>
+<li>An eigenvector of a squre matrix $A$ is a non-zero vector $v$ such that multiplication by $A$ alters only the scale of $v$: $Av=\lambda v$. $\lambda$ is eigenvalue and $v$ is eigenvector.</li>
+<li>Suppose matrix $A$ has $n$ linearly independent eigenvectors $v^{(i)}$, we can conctenate all of the eigenvectors to form a matrix $V=[v^{(1)},\ldots,v^{(n)}]$, and form a vector by concatenating all eigenvalues $\lambda=[\lambda_1,\ldots,\lambda_n]^T$, then the <strong>eigendecomposition</strong> of $A$ is $A=Vdiag(\lambda)V^{-1}$</li>
+<li>Every real symmetric matrix can be decompsed into $A=Q\Lambda Q^T$, where $Q$ is an orthogonal matrix composed of eigenvectors of $A$, and $\Lambda$ (pronoucation 'lambda') is a diagnoal matrix.</li>
+</ul>
+</li>
+<li>Lagrange multipliers:
+<ul>
+<li>Lagrange multipliers is a strategy for finding the local maxima and minima of a function subject to equation constraints.</li>
+<li>General form: $\mathcal{L}(x,\lambda)=f(x)+\lambda\cdot g(x)$, $\lambda$ is called Lagrange multiplier.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-detailed-pca-derivation">3 Detailed PCA Derivation</h2>
+<p><strong>Requirement description</strong></p>
+<p>We have <strong>input data</strong> with $m$ points ${x^{(1)},...,x^{(m)}}$ in $\mathbb{R}^{n}$ real number sets. So each points $x^{(i)}$ is a colomn vector which has $n$ dimensionalities feature.</p>
+<p>We need to apply lossy compression to the input data, encoding these points to represent a lower-dimensional version of them. In other words, we want to know the code vector $c^{(i)}\in \mathbb{R}^{l}$, $(l&lt;n)$ to represent each input point $x^{(i)}$. Our <strong>target</strong> is to find the encoding function $f(x)=c$ producing the code vector for the input, and the correspoinding reconstruction (decoding) fuction $x\approx g(f(x))$, computing the orogin input based on the code vector $c$.</p>
+<p>The decoded $g(f(x))$ is a new set of points(variables), so it &quot;$\approx$&quot; to the orgin $x$. Sotring $c^{(i)}$ and decoding function is cheaper in memroy than storing $x^{(i)}$ since $c^{(i)}$ has less dimenstionality.</p>
+<p><strong>Decoding matrix</strong></p>
+<p>We choose to use matrix $D$ as the decoding matrix, mapping the code vector $c^{(i)}$ back to $\mathbb{R}^{n}$, so $g(c)=Dc$, where $D\in \mathbb{R}^{n\times l}$. To keep the encoding proble easy, PCA constrains the columns of $D$ to be orthogonal to each other.</p>
+<p><strong>Measure reconstruction performance</strong></p>
+<p>Before going on, we need to figure out how to generate the optimal code point $c^{<em>}$, we can measure the distance between the input point $x$ and its reconstruction $g(c^</em>)$, using $L^2$ norm (or Euclidean norm): $c^{<em>}=\arg\min_c||x-g(c)||_2$. Since $L^2$ norm is non-negative, and squaring operation is monotonically increasing, so we can switch to use squred $L^2$ norm:
+$$c^{</em>}=\argmin_c||x-g(c)||_2^2$$</p>
+<p>$L^2$ norm of a vector is the sum of the squares of its components, it equals to the dot product of he vector with itself e.g. $||x||_2=\sqrt{\sum|x_i|^2}=\sqrt{x^Tx}$, so the squared $L^2$ norm can be wrote in the form:
+$$||x-g(c)||_2^2 = (x-g(c))^T(x-g(c))$$
+By the distributive property:
+$$=(x^T-g(c)^T)(x-g(c))=x^Tx-x^Tg(c)-g(c)^Tx+g(c)^Tg(c)$$
+Since $x^Tg(c)$ and $g(c)^Tx$ are scalar, and scalar is equal to its transpose, $(g(c)^Tx)^T=x^Tg(c)$, so:
+$$=x^Tx-2x^Tg(c)+g(c)^Tg(c)$$</p>
+<p>To find the $c$ minimizing the above function, the fiirst term can be omitted since it does not depend on $c$, so:
+$$c^*=\argmin_c-2x^Tg(c)+g(c)^Tg(c)$$</p>
+<p>Then substitute in the definition of $g(c)$ with $Dc$:
+$$=\argmin_c-2x^TDc+c^TD^TDc$$
+By the orthogonality and unit norm constraints on $D$:
+$$c^*=\argmin_c-2x^TDc+c^TI_lc$$
+$$= \argmin_c-2x^TDc+c^Tc$$</p>
+<p><strong>Objective function</strong></p>
+<p>Now the objective function is $-2x^TDc+c^Tc$, where we need to find the $c^*$ to minimize the objective function. Using vector calculus and let its derivative equals to 0:
+$$\nabla_c(-2x^TDc+c^Tc)=0$$
+According to vector derivative rules:
+$$-2D^Tx+2c=0 \Rightarrow c=D^Tx$$</p>
+<p><strong>Find the encoding matrix $D$</strong></p>
+<p>So the encoder function is $f(x)=D^Tx$. Therefore we can define the PCA reconstruction operation as $r(x)=g(f(x))=D(D^Tx)=DD^Tx$.</p>
+<p>So the encoding matrix $D$ is also used by reconstruction process. We need to find the optimal $D$ to minimize the reconstruction error, the distance between all dimentional feature of inputs and reconstructions. Here use Frobenius norm (matrix norm) define the objective function:</p>
+<p>$$D^*=\argmin_D\sqrt{\sum_{i,j}(x_j^{(i)}-r(x^{i})_j)^2},\quad D^TD=I_l$$</p>
+<p>Start by considering the case  where $l=1$ (this is the first principle component), $D$ is a single vector $d$, and use squared $L^2$ norm form:</p>
+<p>$$d^*=\argmin_d{\sum_{i}||(x^{(i)}-r(x^{i}))}||_2^2, ||d||_2=1$$</p>
+<p>$$d^*= \argmin_d{\sum_{i}||(x^{(i)}-dd^Tx^{(i)})||_2^2}, ||d||_2=1$$</p>
+<p>$d^Tx^{(i)}$ is a scalar:</p>
+<p>$$= \argmin_d{\sum_{i}||(x^{(i)}-d^Tx^{(i)}d)}||_2^2, ||d||_2=1$$</p>
+<p>Scalar is its own transpose:
+$$d^*= \argmin_d{\sum_{i}||(x^{(i)}-x^{(i)T}dd)}||_2^2, ||d||_2=1$$</p>
+<p><strong>Use matrix form represent</strong></p>
+<p>Let $X\in \mathbb{R}^{m\times n}$ defined by stacking all of the vectors describing the points ${x^{(1)^T}, x^{(2)^T}, \ldots, x^{(i)^T}, \ldots, x^{(m)^T}}$, such that $X_{i,:}=x^{(i)^T}$.
+$$
+X = \begin{bmatrix} x^{(1)^T}\ x^{(2)^T}\ \ldots\ x^{(m)^T} \end{bmatrix} \Rightarrow
+Xd = \begin{bmatrix} x^{(1)^T}d\ x^{(2)^T}d\ \ldots\ x^{(m)^T}d \end{bmatrix} $$
+$$
+\Rightarrow Xdd^T =
+\begin{bmatrix}
+x^{(1)^T}dd^T\
+x^{(2)^T}dd^T\
+\ldots\
+x^{(m)^T}dd^T\
+\end{bmatrix}
+$$</p>
+<p>$$
+\Rightarrow X-Xdd^T =
+\begin{bmatrix}
+x^{(1)^T}-x^{(1)^T}dd^T\
+x^{(2)^T}-x^{(2)^T}dd^T\
+\ldots\
+x^{(m)^T}-x^{(m)^T}dd^T\
+\end{bmatrix}
+$$</p>
+<p>One row's transpose in the matrix:
+$$(x^{(i)^T}-x^{(i)^T}dd^T)^T=x^{(i)}-dd^Tx^{(i)}$$
+Since $d^Tx^{(i)}$ is a scalar:
+$$=x^{(i)}-d^Tx^{(i)}d=x^{(i)}-x^{(i)^T}dd$$</p>
+<p>So we know the $L^2$ norm of the $i$-th row of $X$ is same as the origin form，therefore we can rerwrite the problem and omit sum sign using the matrix as:
+$$d^*=\argmin_{d}||X-Xdd^T||_F^2, \quad d^Td=1 $$</p>
+<p>Simplify the Frobenius norm portion with matrix trace rules as follows:</p>
+<p>$$\argmin_{d}||X-Xdd^T||_F^2$$</p>
+<p>$$=\argmin_{d}Tr((X-Xdd^T)^T(X-Xdd^T))$$
+$$=\argmin_{d}-Tr(X^TXdd^T)-Tr(dd^TX^TX)+Tr(dd^TX^TXdd^T)$$
+$$=\argmin_{d}-2Tr(X^TXdd^T)+Tr(X^TXdd^Tdd^T)$$</p>
+<p>Due to $d^Td=1$:
+$$=\argmin_{d}-2Tr(X^TXdd^T)+Tr(X^TXdd^T)$$
+$$=\argmin_{d}-Tr(X^TXdd^T)$$
+$$={\arg\max}_{d}Tr(X^TXdd^T)$$</p>
+<p>Since the trace is cyclic permutation invariant, rewrite the equation as:
+$$d^*={\arg\max}_{d}Tr(d^TX^TXd), \quad d^Td=1$$</p>
+<p>Due to the fact $d^TX^TXd$ is a real number, so the trace sign can be omitted:
+$$d^*={\arg\max}_{d}d^TX^TXd,\quad d^Td=1$$</p>
+<p><strong>Find the optimal $d$</strong></p>
+<p>Now the problem is to find the optimal $d$ to maximize $d^TX^TXd$ with constraint $d^Td=1$.</p>
+<p>Represent the problem with Lagrange multiplier form w.r.t. $d$:
+$$\mathcal{L}(d,\lambda)=d^TX^TXd+\lambda(d^Td-1)$$</p>
+<p>Derivate with respect to $d$ (vector derivatives rules):
+$$\nabla_d\mathcal{L}(d,\lambda)=2X^TXd+2\lambda d$$</p>
+<p>Let the derivation equal to 0, the $d$ will be the optimal one:
+$$2X^TXd+2\lambda d=0$$
+$$X^TXd=-\lambda d$$
+$$X^TXd=\lambda' d,\quad(\lambda'=-\lambda)$$</p>
+<p>The equation is typical eigen decomposition form, the $d$ is the eigen vector of $X^TX$ and the $\lambda'$ is the corresponding eigen value.</p>
+<p>With above, let's recheck the origin equation:</p>
+<p>$$d^*={\arg\max}_{d}d^TX^TXd, \quad d^Td=1$$</p>
+<p>$$={\arg\max}_{d}d^T\lambda' d$$</p>
+<p>$$={\arg\max}_{d}\lambda'd^T d$$</p>
+<p>$$={\arg\max}_{d}\lambda'$$</p>
+<p>Now things are very clear, the largest eigenvalue of $X^TX$ maximizes the result, so the optimal $d$ is given by the eigenvector of $X^TX$ corresponding to the largest eigenvalue.</p>
+<p>The derivation is specific to the case of $l=1$ and recovers only the first principla component. When $l&gt;1$, $D=[d_1, d_2, \ldots]$ the first principle component $d_1$ is the eigenvector of matrix $X^TX$ corrsponding to the largest eigenvalue, the second principle component $d_2$ is the eigenvector corresponding to the second largest eigenvalue, etc.</p>
+<h2 id="4-summary">4 Summary</h2>
+<p>We have a dataset consisting of $m$ points  denoted as ${x^{(1)},...,x^{(m)}}$. Let $X\in \mathbb{R}^{m\times n}$ be defined by stacking all of these points as rows: ${x^{(1)^T}, x^{(2)^T}, \ldots, x^{(i)^T}, \ldots, x^{(m)^T}}$.</p>
+<p>The Principal Component Analysis (PCA) encoding function is represented as $f(x)=D^Tx$, and reconstruction function as $x\approx g(c)=Dc$, where the columns of $D=[d_1, d_2, \ldots]$ are the eigenvectors of $X^TX$ corrresponding the eigenvalues in descending order.</p>
+    </div>
+<div class="post_comments">
+  
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-mengwoods-github-io-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+  
+</div>
+
+
+<div class="post_i18n">
+  <h3 class="mb-0">Translations:</h3>
+  <nav class="tags_nav">
+    
+      <a href="https://mengwoods.github.io/cn/post/math/003-pca/" class="post_tag button button_translucent">Chinese</a> 
+      
+    
+    </nav>
+</div>
+
+
+
+  </article>
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+    <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68 0 0 1-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078a3.56 3.56 0 0 0-1.076 2.605c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388a3.623 3.623 0 0 0 2.115 1.291c-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652 0 0 0 2.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77 0 0 0 1.172-4.892v-.468a7.788 7.788 0 0 0 1.84-1.921 8.142 8.142 0 0 1-2.11.593z"
+      ></path>
+  </symbol>
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+    <path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" id="gitlab">
+    <path d="M12.3 74.7h54L43.3 3c-1-3.6-6.4-3.6-7.6 0L12.3 74.8z" />
+    <path d="M12.3 74.7L.5 111c-1 3.2 0 6.8 3 8.8l101.6 74-92.5-119z"/>
+    <path d="M105 193.7l-38.6-119h-54l92.7 119z"/>
+    <path d="M105 193.7l38.7-119H66.4l38.7 119z"/>
+    <path d="M105 193.7l38.7-119H198l-93 119z"/>
+    <path d="M198 74.7l11.6 36.2c1 3 0 6.6-3 8.6l-101.5 74 93-119z"/>
+    <path d="M198 74.7h-54.3L167 3c1.2-3.6 6.4-3.6 7.6 0L198 74.8z"/>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+    <circle cx="3.429" cy="20.571" r="3.429"></circle>
+    <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001 0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"></path>
+    <path d="M24 24C24 10.766 13.234 0 0 0v4.571c10.714 0 19.43 8.714 19.43 19.429z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="to-top">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow">
+    <path d="M21 27v-8h3v11H0V19h3v8h18z"></path><path d="M17.1.2L15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8l13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="xing">
+    <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" id="discord">
+    <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" id="mastodon">
+    <path
+    fill="#ffffff"
+    d="m 15.054695,9.8859583 c -0.22611,1.1632697 -2.02517,2.4363497 -4.09138,2.6830797 -1.0774504,0.12856 -2.1382704,0.24673 -3.2694704,0.19484 -1.84996,-0.0848 -3.30971,-0.44157 -3.30971,-0.44157 0,0.1801 0.0111,0.35157 0.0333,0.51194 0.24051,1.82571 1.81034,1.93508 3.29737,1.98607 1.50088,0.0514 2.8373104,-0.37004 2.8373104,-0.37004 l 0.0617,1.35686 c 0,0 -1.0498104,0.56374 -2.9199404,0.66742 -1.03124,0.0567 -2.3117,-0.0259 -3.80308,-0.42069 -3.23454998,-0.85613 -3.79081998,-4.304 -3.87592998,-7.8024197 -0.026,-1.03871 -0.01,-2.01815 -0.01,-2.83732 0,-3.57732 2.34385998,-4.62587996 2.34385998,-4.62587996 1.18184,-0.54277 3.20976,-0.77101 5.318,-0.7882499985409 h 0.0518 C 9.8267646,0.01719834 11.856025,0.24547834 13.037775,0.78824834 c 0,0 2.34377,1.04855996 2.34377,4.62587996 0,0 0.0294,2.63937 -0.32687,4.47183"/>
+ <path
+    fill="#000000"
+    d="m 12.616925,5.6916583 v 4.3315297 h -1.71607 V 5.8189683 c 0,-0.88624 -0.37289,-1.33607 -1.1187604,-1.33607 -0.82467,0 -1.23799,0.53361 -1.23799,1.58875 v 2.30122 h -1.70594 v -2.30122 c 0,-1.05514 -0.4134,-1.58875 -1.23808,-1.58875 -0.74587,0 -1.11876,0.44983 -1.11876,1.33607 v 4.2042197 h -1.71607 V 5.6916583 c 0,-0.88527 0.22541,-1.58876 0.67817,-2.10922 0.46689,-0.52047 1.07833,-0.78727 1.83735,-0.78727 0.87816,0 1.54317,0.33752 1.98288,1.01267 l 0.42744,0.71655 0.42753,-0.71655 c 0.43961,-0.67515 1.10463,-1.01267 1.9828704,-1.01267 0.75893,0 1.37037,0.2668 1.83735,0.78727 0.45268,0.52046 0.67808,1.22395 0.67808,2.10922"/>
+  </symbol>
+</svg>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='https://mengwoods.github.io/icons/apple-touch-icon.png' class="icon icon_2 transparent" alt="Copyright © 2024, Meng blog; all rights reserved.">
+    <p>Copyright&nbsp;<span class="year"></span>&nbsp;COPYRIGHT © 2024, MENG BLOG; ALL RIGHTS RESERVED.. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <title>to-top</title>
+  <use xlink:href="#to-top"></use>
+</svg>
+
+</a>
+
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://mengwoods.github.io/en/js/bundle.355cf69c98ebdc2dfd538b625fe47ecdcb4e20c2138f80e51cf5425011e8235debe8bf35913e718ee1c24fd71d1f40c12f73985c98cc237a2996520f768509af.js" integrity="sha512-NVz2nJjr3C39U4tiX&#43;R&#43;zctOIMITj4DlHPVCUBHoI13r6L81kT5xjuHCT9cdH0DBL3OYXJjMI3opllIPdoUJrw==" crossorigin="anonymous"></script>
+
+  <script src="https://mengwoods.github.io/js/search.min.786102b9f5b14ee0b60197dc064e532809aec49bcc43fea72e5a513113f04b44a7241d6683d3993d5b7a48582f4986e0b9a28c72ebc48a2072c52aad8f40a2b3.js"></script>
+
+  </body>
+</html>

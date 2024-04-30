@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andriod on Menghao blog</title>
+    <link>https://mengwoods.github.io/cn/tags/andriod/</link>
+    <description>Recent content in Andriod on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/tags/andriod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>了解 Andriod Studio 项目目录各文件功能</title>
+      <link>https://mengwoods.github.io/cn/post/tech/004-as-folder-functios/cn/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/004-as-folder-functios/cn/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Andriod 项目目录各个文件夹功能详细记录&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

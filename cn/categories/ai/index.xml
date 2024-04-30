@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Menghao blog</title>
+    <link>https://mengwoods.github.io/cn/categories/ai/</link>
+    <description>Recent content in AI on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MMDetection3D库的安装指导</title>
+      <link>https://mengwoods.github.io/cn/post/tech/001-install-openmm3d-lib/cn/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/001-install-openmm3d-lib/cn/</guid>
+      <description>
+        
+          
+            准备 本安装在以下环境中进行了测试：Ubuntu 20.04、CUDA-11.6、PyTorch v1.13.1。
+Miniconda 此安装在conda虚拟环境中进行，因此请确保已安装Miniconda。
+Linux下安装：
+1mkdir -p ~/miniconda3 2wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh 3bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 4rm -rf ~/miniconda3/miniconda.sh 初始化：
+1~/miniconda3/bin/conda init bash 2~/miniconda3/bin/conda init zsh CUDA Toolkit 本问建议使用CUDA 11.6和Nvidia驱动程序510.39.01。Nvidia驱动程序可以与CUDA一起安装。
+检查CUDA版本：nvcc --version 从系统中删除CUDA：sudo /usr/local/cuda-11.x/bin/cuda-uninstaller（将x替换为CUDA的版本） 检查Nvidia驱动程序版本：nvidia-smi 删除Nvidia驱动程序：sudo /usr/bin/nvidia-uninstall 安装CUDA11.6和驱动程序510.39.01：
+1wget https://developer.download.nvidia.com/compute/cuda/11.6.0/local_installers/cuda_11.6.0_510.39.01_linux.run 2sudo sh cuda_11.6.0_510.39.01_linux.run 在终端中勾选Nvidia驱动程序。
+若需要安装其他版本，请查看官方网站。
+安装依赖 创建一个虚拟环境：
+1conda create --name openmmlab python=3.8 -y 2conda activate openmmlab 安装PyTorch v1.13.1：
+1conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia 安装SpConv：
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

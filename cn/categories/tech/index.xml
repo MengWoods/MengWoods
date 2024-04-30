@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Menghao blog</title>
+    <link>https://mengwoods.github.io/cn/categories/tech/</link>
+    <description>Recent content in Tech on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些实用的Docker命令</title>
+      <link>https://mengwoods.github.io/cn/post/tech/003-some-docker-commands/cn/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/003-some-docker-commands/cn/</guid>
+      <description>
+        
+          
+            本文收集了一些有用的Docker命令。
+0. 基本概念和命令 Docker容器和Docker镜像
+Docker container 是Docker镜像的运行实例，提供了一个可以启动、停止和删除的独立环境。 Docker image 是一个静态、只读文件，包含创建容器所需的一切内容。它是启动Docker容器的源文件。
+基本Docker命令
+1# 通过镜像名拉取Docker镜像 2docker pull &amp;lt;镜像名称&amp;gt; 3 4# 列出本地可用的Docker镜像（镜像ID） 5docker images 6# 列出当前正在运行的Docker容器（容器ID） 7docker ps 8# 列出当前正在运行的Docker容器，包括已停止的容器 9docker ps -a 10 11# 查看特定容器的日志 12docker logs &amp;lt;容器ID&amp;gt; 13# 停止运行中的容器 14docker stop &amp;lt;容器ID&amp;gt; 15 16# 通过镜像ID在本地删除Docker镜像 17docker rmi &amp;lt;镜像ID&amp;gt; 18 19# 在`docker-compose.yml`文件中启动容器（使用-d以进行分离模式） 20docker-compose up 21# 在`docker-compose.yml`文件中停止容器 22docker-compose down 查看基本Docker信息 查看用户名和Docker镜像库：
+1docker system info | grep -E &amp;#39;Username|Registry&amp;#39; 1. 其他实用的命令 将镜像保存到.tar文件。
+首先使用docker images命令来查看您想要保存的镜像ID，然后使用以下命令进行保存：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Docker中使用conda虚拟环境</title>
+      <link>https://mengwoods.github.io/cn/post/tech/002-run-conda-in-dockerfile/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/002-run-conda-in-dockerfile/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Dockerfile, Conda&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>MMDetection3D库的安装指导</title>
+      <link>https://mengwoods.github.io/cn/post/tech/001-install-openmm3d-lib/cn/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/001-install-openmm3d-lib/cn/</guid>
+      <description>
+        
+          
+            准备 本安装在以下环境中进行了测试：Ubuntu 20.04、CUDA-11.6、PyTorch v1.13.1。
+Miniconda 此安装在conda虚拟环境中进行，因此请确保已安装Miniconda。
+Linux下安装：
+1mkdir -p ~/miniconda3 2wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh 3bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 4rm -rf ~/miniconda3/miniconda.sh 初始化：
+1~/miniconda3/bin/conda init bash 2~/miniconda3/bin/conda init zsh CUDA Toolkit 本问建议使用CUDA 11.6和Nvidia驱动程序510.39.01。Nvidia驱动程序可以与CUDA一起安装。
+检查CUDA版本：nvcc --version 从系统中删除CUDA：sudo /usr/local/cuda-11.x/bin/cuda-uninstaller（将x替换为CUDA的版本） 检查Nvidia驱动程序版本：nvidia-smi 删除Nvidia驱动程序：sudo /usr/bin/nvidia-uninstall 安装CUDA11.6和驱动程序510.39.01：
+1wget https://developer.download.nvidia.com/compute/cuda/11.6.0/local_installers/cuda_11.6.0_510.39.01_linux.run 2sudo sh cuda_11.6.0_510.39.01_linux.run 在终端中勾选Nvidia驱动程序。
+若需要安装其他版本，请查看官方网站。
+安装依赖 创建一个虚拟环境：
+1conda create --name openmmlab python=3.8 -y 2conda activate openmmlab 安装PyTorch v1.13.1：
+1conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia 安装SpConv：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>使用Hugo搭建个人博客</title>
+      <link>https://mengwoods.github.io/cn/post/tech/000-build-hugo-site/en/</link>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/000-build-hugo-site/en/</guid>
+      <description>
+        
+          
+            安装Hugo 在Github releases页面下载安装最新版本。 例如下载*.deb文件然后使用dpkg -i *.deb安装。
+或者使用官方文档安装：【安装方法】
+第一步：创建所需Repo 在Github创建两个Repo，创建时皆勾选Add a README file选项：
+Blog源文件仓库：存储网页源文件，用于生成博客网站。（参考命名：blog-resources） Pages仓库：用于保存所生成的网页文件，并可通过网址进入博客。（命名需按照：&amp;lt;username&amp;gt;.github.io，其中&amp;lt;username&amp;gt;为Github账户名。【官方说明】） 第二步：使用Hugo命令创建博客文件 源文件仓库名以blog-resources为例。
+克隆blog-resources到本地。 进入blog-resources路径中，使用Hugo命令创建网站整体文件夹结构hugo new site &amp;lt;blog-name&amp;gt;，替换&amp;lt;blog-name&amp;gt;为你需要的，例如woods-blog。 此时repo文件结构以及它们的主要用途如下： 1├── README.md # 创建Repo时自动天剑的README 2└── woods-blog # 博客文件夹名，与上一步使用hugo创建的一致 3 ├── archetypes 4 ├── config.toml # 博客网站自定义配置文件，需要进一步编辑 5 ├── content # 博客内容文件夹，存放博客文档，图片等 6 ├── data 7 ├── layouts 8 ├── resources 9 ├── static 10 └── themes # 主题文件夹，需要进一步安装Hugo主题 第三步：添加主题文件并配置 浏览Hugo主题并选择。 主题介绍部分一般带有安装方法，可以按照该方法进行安装。但我在安装一些主题过程中总遇到错误。此处以我选择的主题Mainroad进行介绍。 进入博客文件路径blog-resources/woods-blog，以git submodule方式添加主题文件。 1git submodule add https://github.com/vimux/mainroad.git themes/mainroad 若添加成功，此时在blog-resources/woods-blog/themes下会出现该主题文件名为Mainroad。 1└── themes 2 └── Mainroad # 此处为所安装的主题名 在blog-resources/woods-blog/themes/Mainroad/exampleSite中，复制文件夹content，static，和文件config.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>了解 Andriod Studio 项目目录各文件功能</title>
+      <link>https://mengwoods.github.io/cn/post/tech/004-as-folder-functios/cn/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/004-as-folder-functios/cn/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Andriod 项目目录各个文件夹功能详细记录&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Menghao blog</title>
+    <link>https://mengwoods.github.io/categories/math/</link>
+    <description>Recent content in Math on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Principle Components Analysis (PCA) application</title>
+      <link>https://mengwoods.github.io/post/math/003-pca-application/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/003-pca-application/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Application example&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Detailed Deep Derivation of Principle Components Analysis (PCA)</title>
+      <link>https://mengwoods.github.io/post/math/003-pca/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/003-pca/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on &lt;em&gt;Deep Learning (2017, MIT)&lt;/em&gt; book.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Vector Cross Product and Dot Product</title>
+      <link>https://mengwoods.github.io/post/math/001-vector-cross-product/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/001-vector-cross-product/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Introduce vector mutiplication with applications.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

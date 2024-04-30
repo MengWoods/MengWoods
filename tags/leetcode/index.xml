@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leetcode on Menghao blog</title>
+    <link>https://mengwoods.github.io/tags/leetcode/</link>
+    <description>Recent content in Leetcode on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode-Max area of longest diagnoal rectangle</title>
+      <link>https://mengwoods.github.io/post/code/001-leetcode-max-area/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/code/001-leetcode-max-area/</guid>
+      <description>
+        
+          
+            &lt;p&gt;3000 Maximum Area of Longest Diagonal Rectangle&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

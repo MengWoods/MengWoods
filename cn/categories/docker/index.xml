@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Menghao blog</title>
+    <link>https://mengwoods.github.io/cn/categories/docker/</link>
+    <description>Recent content in Docker on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些实用的Docker命令</title>
+      <link>https://mengwoods.github.io/cn/post/tech/003-some-docker-commands/cn/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/003-some-docker-commands/cn/</guid>
+      <description>
+        
+          
+            本文收集了一些有用的Docker命令。
+0. 基本概念和命令 Docker容器和Docker镜像
+Docker container 是Docker镜像的运行实例，提供了一个可以启动、停止和删除的独立环境。 Docker image 是一个静态、只读文件，包含创建容器所需的一切内容。它是启动Docker容器的源文件。
+基本Docker命令
+1# 通过镜像名拉取Docker镜像 2docker pull &amp;lt;镜像名称&amp;gt; 3 4# 列出本地可用的Docker镜像（镜像ID） 5docker images 6# 列出当前正在运行的Docker容器（容器ID） 7docker ps 8# 列出当前正在运行的Docker容器，包括已停止的容器 9docker ps -a 10 11# 查看特定容器的日志 12docker logs &amp;lt;容器ID&amp;gt; 13# 停止运行中的容器 14docker stop &amp;lt;容器ID&amp;gt; 15 16# 通过镜像ID在本地删除Docker镜像 17docker rmi &amp;lt;镜像ID&amp;gt; 18 19# 在`docker-compose.yml`文件中启动容器（使用-d以进行分离模式） 20docker-compose up 21# 在`docker-compose.yml`文件中停止容器 22docker-compose down 查看基本Docker信息 查看用户名和Docker镜像库：
+1docker system info | grep -E &amp;#39;Username|Registry&amp;#39; 1. 其他实用的命令 将镜像保存到.tar文件。
+首先使用docker images命令来查看您想要保存的镜像ID，然后使用以下命令进行保存：
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>在Docker中使用conda虚拟环境</title>
+      <link>https://mengwoods.github.io/cn/post/tech/002-run-conda-in-dockerfile/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/tech/002-run-conda-in-dockerfile/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Dockerfile, Conda&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

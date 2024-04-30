@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DL on Menghao blog</title>
+    <link>https://mengwoods.github.io/categories/dl/</link>
+    <description>Recent content in DL on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/categories/dl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note of Machine learning course</title>
+      <link>https://mengwoods.github.io/post/dl/005-ng-ml/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/dl/005-ng-ml/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on NG Machine Learning course (WIP).&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Probability Knowledge for Deep Learning</title>
+      <link>https://mengwoods.github.io/post/dl/001-probability/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/dl/001-probability/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on &lt;em&gt;Deep Learning (2017, MIT)&lt;/em&gt; book.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Menghao blog</title>
+    <link>https://mengwoods.github.io/post/</link>
+    <description>Recent content in Posts on Menghao blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note of Machine learning course</title>
+      <link>https://mengwoods.github.io/post/dl/005-ng-ml/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/dl/005-ng-ml/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on NG Machine Learning course (WIP).&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Probability Knowledge for Deep Learning</title>
+      <link>https://mengwoods.github.io/post/dl/001-probability/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/dl/001-probability/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on &lt;em&gt;Deep Learning (2017, MIT)&lt;/em&gt; book.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Principle Components Analysis (PCA) application</title>
+      <link>https://mengwoods.github.io/post/math/003-pca-application/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/003-pca-application/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Application example&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Detailed Deep Derivation of Principle Components Analysis (PCA)</title>
+      <link>https://mengwoods.github.io/post/math/003-pca/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/003-pca/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Based on &lt;em&gt;Deep Learning (2017, MIT)&lt;/em&gt; book.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>My paintings&#39; channel</title>
+      <link>https://mengwoods.github.io/post/hobby/000-paintings/</link>
+      <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/hobby/000-paintings/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Channels of my paintings.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Dockerfile records</title>
+      <link>https://mengwoods.github.io/post/tech/002-run-conda-in-dockerfile/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/002-run-conda-in-dockerfile/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Dockerfile examples&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Boost::geometry Polygon operations (C&#43;&#43;)</title>
+      <link>https://mengwoods.github.io/post/code/003-polygon-operation/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/code/003-polygon-operation/</guid>
+      <description>
+        
+          
+            &lt;p&gt;C++ Code for Polygon operation with Boost geometry library&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode-Max area of longest diagnoal rectangle</title>
+      <link>https://mengwoods.github.io/post/code/001-leetcode-max-area/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/code/001-leetcode-max-area/</guid>
+      <description>
+        
+          
+            &lt;p&gt;3000 Maximum Area of Longest Diagonal Rectangle&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Standard Containers and Use Cases</title>
+      <link>https://mengwoods.github.io/post/code/002-c&#43;&#43;-containers/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/code/002-c&#43;&#43;-containers/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Intro of C++ containers and usage method&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; general knowledge</title>
+      <link>https://mengwoods.github.io/post/code/000-general-question/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/code/000-general-question/</guid>
+      <description>
+        
+          
+            &lt;p&gt;General knowledge recordings.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Vector Cross Product and Dot Product</title>
+      <link>https://mengwoods.github.io/post/math/001-vector-cross-product/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/math/001-vector-cross-product/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Introduce vector mutiplication with applications.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>ROS2 commands record</title>
+      <link>https://mengwoods.github.io/post/tech/005-ros2/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/005-ros2/</guid>
+      <description>
+        
+          
+            &lt;p&gt;The blog collects some useful ROS2 commands.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>How I start monthly S&amp;P500 investment via Nordnet.</title>
+      <link>https://mengwoods.github.io/post/hobby/2024-01-30-fund/en/</link>
+      <pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/hobby/2024-01-30-fund/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;SP500, Nordnet usage&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Some Useful Docker Commands</title>
+      <link>https://mengwoods.github.io/post/tech/003-some-docker-commands/en/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/003-some-docker-commands/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;The blog collects some useful Docker commands.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>MMDetection3D Library Installation Guide</title>
+      <link>https://mengwoods.github.io/post/tech/001-install-openmm3d-lib/en/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/001-install-openmm3d-lib/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Cuda, Conda, MMDetection3D installation and test.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Build Personal Blog with Hugo</title>
+      <link>https://mengwoods.github.io/post/tech/000-build-hugo-site/en/</link>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/000-build-hugo-site/en/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Hugo, blog&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>TODO List</title>
+      <link>https://mengwoods.github.io/post/todolist/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/todolist/</guid>
+      <description>
+        
+          
+            Other:
+Driver license school Tooth check Math:
+rotation matrix， matrix multiplication meaning， in robotiics covariance matrix Bayesian formula and application SVM Nearest neighbor regression DL:
+SVM application example Kaggle applications, LSTM etc. Pub RL code Code:
+const reference and dereference this, -&amp;gt;, * pointer lambda function Data structure, tree parrallel computing (omp) 
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mengwoods.github.io/post/tech/note/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/post/tech/note/</guid>
+      <description>
+        
+          
+            1[ERROR] [1712251587.444260]: bad callback: &amp;lt;bound method TerrainSegmentation.callback of &amp;lt;__main__.TerrainSegmentation object at 0x7fee81788110&amp;gt;&amp;gt; 2Traceback (most recent call last): 3 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py&amp;#34;, line 750, in _invoke_callback 4 cb(msg) 5 File &amp;#34;/home/m/Workspace/catkin-ws-odts/install/ganav_terrain_segmentation/lib/ganav_terrain_segmentation/terrain_segmentation.py&amp;#34;, line 60, in callback 6 cv_image = self.bridge.imgmsg_to_cv2(data, desired_encoding=&amp;#34;rgb8&amp;#34;) 7 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 163, in imgmsg_to_cv2 8 dtype, n_channels = self.encoding_to_dtype_with_channels(img_msg.encoding) 9 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 99, in encoding_to_dtype_with_channels 10 return self.cvtype2_to_dtype_with_channels(self.encoding_to_cvtype2(encoding)) 11 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 91, in encoding_to_cvtype2 12 from cv_bridge.
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
