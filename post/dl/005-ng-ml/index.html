@@ -157,7 +157,7 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 2 min read</span>
+    <span class="post_time"> · 4 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -298,6 +298,101 @@ Matrix is 2D array.</p>
 <blockquote>
 <p>P53 Forward prop in a singile layer</p>
 </blockquote>
+<blockquote>
+<p>P61</p>
+</blockquote>
+<p>Binary classification problem, The logistic loss function, also known as binary cross entropy.</p>
+<p>Compute derivatives for gradient descent using back propagation.</p>
+<blockquote>
+<p>P62 Activation function</p>
+</blockquote>
+<p>Sigmoid</p>
+<p>Commen used one is ReLU (rectified linear unit) $g(z)=\max (0,z)$.</p>
+<blockquote>
+<p>P63</p>
+</blockquote>
+<p>Classification prolem, sigmoid function is nature choice for output layer.</p>
+<p>Regression: Linear activation function for output layer</p>
+<p>Or ReLU if for non-negative output values.</p>
+<p>For hidden layer activation, ReLU is more common used. Sigmoid is rarely used today. ReLU is fast to compute, ReLU goes to flat only to the left, Sigmoid has two flat zone, it makes gradient descent fast.</p>
+<blockquote>
+<p>P66 Multiclass, Softmax</p>
+</blockquote>
+<p>Softmax is used for multiclass classification problem</p>
+<p>Softmax regression, N possible outputs</p>
+<p>$z_j = w_j \cdot x + b_j, j=1,...,N$</p>
+<p>parameters w and b</p>
+<p>activation function: $a_j=\dfrac{e^{z_j}}{\sum_{k=1}^{N}e^{z_k}}=\mathbf{P}(y=j|x)$</p>
+<p>$a_1 + ... + a_N=1$</p>
+<p>If use softmax for binary classification, it is same as sigmoid activation.</p>
+<blockquote>
+<p>P67</p>
+</blockquote>
+<p>For digit recognition prolem, use softmax as output layer, and use 10 neutron to form the output layer.</p>
+<p>Loss function name in TF is SparseCategoricalCrossentropy</p>
+<blockquote>
+<p>P68</p>
+</blockquote>
+<p>TF, from_logits=True will make the round off more accurate when with softmax.</p>
+<p><code>model.compile(loss=SparseCategoricalCrossEntropy(from_logits=True))</code></p>
+<blockquote>
+<p>P69 Multi labels classification</p>
+</blockquote>
+<p>Can use sigmoid activations function for the output layer.</p>
+<blockquote>
+<p>P79 Advance Optimization</p>
+</blockquote>
+<p>Adam (Adaptive moment estimation) algorithm, automatically adjusts the learning rate alpha. It not just one alpha, but each neutro has one learning rate.</p>
+<p>If w or b keeps moving in same direction, increase alpha
+If keeps oscillating, reduce alpha.</p>
+<p>In code, model compile select optimizer use Adam. It uses one default init learning rate.</p>
+<p>It is better than gradient descent algorithm.</p>
+<blockquote>
+<p>P71</p>
+</blockquote>
+<p>Dense layer.</p>
+<p>Convolutional layer, Each neuron only looks at part of the previous layer's inputs. looking a window.</p>
+<ul>
+<li>Faster computation</li>
+<li>Need less training data, less prone to overfitting.</li>
+</ul>
+<p>LSTM, Transformer, attention models.</p>
+<blockquote>
+<p>P75</p>
+</blockquote>
+<p>Diagnostic: A test that you run to gain insight into what is/isn't working with a learning algorithm, to gain guidance into improving its performance.</p>
+<blockquote>
+<p>P77 model selcection</p>
+</blockquote>
+<p>Training set, cross validation data, test set.</p>
+<p>Evaluate a model using cross validation data during training, and use testing set to estimate <strong>generalization</strong> error.</p>
+<blockquote>
+<p>P78 Bias/Variance</p>
+</blockquote>
+<p>high bias - underfit
+J_train is high; J_cv is high</p>
+<p>high variance (overfit)
+J_train is low; J_cv is high</p>
+<blockquote>
+<p>P80 Establishing a base line</p>
+</blockquote>
+<p>high bias model，more training dataset helps less.</p>
+<p>high variance model, more training dataset helps.</p>
+<blockquote>
+<p>P82</p>
+</blockquote>
+<ul>
+<li>Get more training examples - fixes high variance</li>
+<li>Try smaller sets of features - fixes high variance
+<ul>
+<li>Reduce flexibility of the model</li>
+</ul>
+</li>
+<li>Try getting additional features - fixes high bias</li>
+<li>Try adding polynomial features - fixes high bias</li>
+<li>Try decreasing lambda - high bias</li>
+<li>Try increasing lambda - high variance</li>
+</ul>
     </div>
 <div class="post_comments">
   
