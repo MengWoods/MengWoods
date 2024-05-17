@@ -157,7 +157,7 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 5 min read</span>
+    <span class="post_time"> · 7 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -426,6 +426,45 @@ Features: list the top 10000 words to compute input variables.</p>
 </ol>
 <blockquote>
 <p>P89</p>
+</blockquote>
+<p><strong>Data augmentation</strong>: Modifying an existing traning example to create a new training example.</p>
+<p>Examples:</p>
+<p>Image recognition: Distortion a image, mirro, rotate, enlarge, shrink, change contrast.</p>
+<p>Speech recognition example. Different of noisy background, bad cellphone connection.</p>
+<p>Usually does not help to add purely random/meaningless noise to your data. It should be representation of the type of noise/distortions in the test set.</p>
+<p><strong>Data synthesis</strong></p>
+<p>Photo OCR example, generate sysnthesis data to train.</p>
+<p>Conventional model-centric approach: AI = Code + Data; Works more on Code (algorithm/model)</p>
+<p>Data-centric approach: AI = Code + Data; Focus on Data engineering.</p>
+<blockquote>
+<p>P90 Transfer learning</p>
+</blockquote>
+<p>Eliminate the last layer of the origin model, and switch it to the layer needed.</p>
+<p>Use the parameter from the first layers from the origin model.</p>
+<p>Option 1: only train output layers parameters.</p>
+<p>Option 2: Train all parameters. The first layers are initialized with the origin model.</p>
+<p>Two steps: Supervised pretraining, Fine tuning.</p>
+<p>Convolution NN: firs layer detects edges, then corners, then curvers/basic shapes.</p>
+<p>Summary: 1. Download NN parameters pretrained. 2. Further train (fine tuen) the network on your own data.</p>
+<blockquote>
+<p>P88 ML Project Development process</p>
+</blockquote>
+<p>Define project: Scope the project.</p>
+<p>Collect data, Define and collect data.</p>
+<p>Train model: Training, error analysis, iterative improvement.</p>
+<p>Deploy in production: Deploy, monitor and maintain system.</p>
+<p>Imploement ML model to a inference server, Mobile app make API call to server, server inferences to mobile app.</p>
+<p>Software engineering may be needed for:</p>
+<ul>
+<li>Ensure reliable and efficient predictions</li>
+<li>Scaling</li>
+<li>Logging</li>
+<li>System monitoring</li>
+<li>Model updates</li>
+</ul>
+<p>MLOps: ML operations: Practice how to systematically build and deploy, maintain ML model.</p>
+<blockquote>
+<p>P89 Ethics, Pairness, bias, and other ethics.</p>
 </blockquote>
     </div>
 <div class="post_comments">
