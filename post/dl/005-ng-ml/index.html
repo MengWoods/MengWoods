@@ -157,7 +157,7 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 4 min read</span>
+    <span class="post_time"> · 5 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -369,9 +369,9 @@ If keeps oscillating, reduce alpha.</p>
 <blockquote>
 <p>P78 Bias/Variance</p>
 </blockquote>
-<p>high bias - underfit
+<p><strong>high bias</strong> - underfit
 J_train is high; J_cv is high</p>
-<p>high variance (overfit)
+<p><strong>high variance</strong> (overfit)
 J_train is low; J_cv is high</p>
 <blockquote>
 <p>P80 Establishing a base line</p>
@@ -393,6 +393,40 @@ J_train is low; J_cv is high</p>
 <li>Try decreasing lambda - high bias</li>
 <li>Try increasing lambda - high variance</li>
 </ul>
+<blockquote>
+<p>P83</p>
+</blockquote>
+<p>Simple model -&gt; High bias
+Complex model -&gt; High variance</p>
+<p>Tradeoff between high bias and high variance.</p>
+<p>Large neural networks are low bias machines. It just fits very compicated functions very well, so when training neural network, we offten faceing problems other than high bias problem if neural network is large enough.</p>
+<p>Does it do well on training set? if not, use bigger network</p>
+<p>Does it do well on the cross validation set? If not, use more training data.</p>
+<p>A large neural network will usually do as well or better than a smaller one so long as <strong>regularization</strong> is chosen appropriately.</p>
+<blockquote>
+<p>P84</p>
+</blockquote>
+<p>Interative loop of ML development</p>
+<p>Choose architecture (model, data, etc.), Train model, Diagnostics (bias, variance, error analysis), choose architecture and so on.</p>
+<p>Text classfication.
+Features: list the top 10000 words to compute input variables.</p>
+<p>Logistic model, or neural network model.</p>
+<blockquote>
+<p>P85 Error analysis</p>
+</blockquote>
+<p>Group the misclassifies in corss validation set based on common traits/features.</p>
+<p>These groups are not mutually exclusive.</p>
+<p>If the dataset is large, can get samples randomly from misclassifies to analysis.</p>
+<p>How to try to reduce your spam classifier's error?</p>
+<ol>
+<li>Collect more data</li>
+<li>Develop sophisticated features based on email routing, from email header</li>
+<li>Define sophisticated features from email body, some words are treated as the same world.</li>
+<li>Design algorithms to detect misspellings.</li>
+</ol>
+<blockquote>
+<p>P89</p>
+</blockquote>
     </div>
 <div class="post_comments">
   
