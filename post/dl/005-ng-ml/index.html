@@ -157,7 +157,7 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 7 min read</span>
+    <span class="post_time"> · 8 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -466,6 +466,46 @@ Features: list the top 10000 words to compute input variables.</p>
 <blockquote>
 <p>P89 Ethics, Pairness, bias, and other ethics.</p>
 </blockquote>
+<blockquote>
+<p>P90 Skewed datasets</p>
+</blockquote>
+<p>Cannot know the best model based on its accuracy rate, because the dataset mai be skewed.</p>
+<p>Use confusion matrix is a better matrix. Precision/recall</p>
+<p>Precision: TP/#predicted positive = TP/(TP + FP)</p>
+<p>Recall: TP/#actual postive = TP / (TP + FN )</p>
+<blockquote>
+<p>P91 Trading off precision and recall</p>
+</blockquote>
+<p>Rasing the logstic regression threshold will lead to higher precision, lower recall.</p>
+<p>Lower the logistic regression will result in lower precision, higher recall.</p>
+<p>F1 score, F1 score = 1/[ 1/2 (1/P + 1/R) ] = 2 PR / (P+R); Harmonic mean of P and R.</p>
+<blockquote>
+<p>P91 Decision Trees</p>
+</blockquote>
+<p>Cat classification example</p>
+<p>Input are categorical values (discrete)</p>
+<p>Node, Topmost node is root node, Decision nodes in the middle of tree, Bottom node is leaf nodes for prediction.</p>
+<blockquote>
+<p>P92</p>
+</blockquote>
+<p>Decision 1: how to choose what feature to split on at each node?</p>
+<p>Maximize purity (or minimize impurity). (Use the most important feature)</p>
+<p>Decision 2: When do you stop splitting?</p>
+<ul>
+<li>When a node is 100% one class</li>
+<li>When splitting a node will result in the tree exceeding a maximum depth.</li>
+<li>When improvements in purity score are below a threshold.</li>
+<li>When number of examples in a node is below a threshold.</li>
+</ul>
+<blockquote>
+<p>P93 Measuring purity</p>
+</blockquote>
+<p>Entropy as a measure of impurity</p>
+<p>Entropy is from 1 to 0, the lower the entropy, the higher the purity.</p>
+<p>$p_0 = 1 - p_1$</p>
+<p>$H(p_1)=-p_1\log_2(p_1)-p_0\log_2(p_0)$</p>
+<p>Note: $0\log(0) = 0$</p>
+<p>The peak of the function is 1 by making the log base is 2.</p>
     </div>
 <div class="post_comments">
   
