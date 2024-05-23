@@ -506,6 +506,27 @@ Features: list the top 10000 words to compute input variables.</p>
 <p>$H(p_1)=-p_1\log_2(p_1)-p_0\log_2(p_0)$</p>
 <p>Note: $0\log(0) = 0$</p>
 <p>The peak of the function is 1 by making the log base is 2.</p>
+<blockquote>
+<p>P94: Decision Tree learning, choose a split: information gain</p>
+</blockquote>
+<p>Choose the feature with the lowest average weighted entropy.</p>
+<p>Information gain.</p>
+<blockquote>
+<p>P95: Putting it together</p>
+</blockquote>
+<ol>
+<li>Start with all examples at the root node</li>
+<li>Calculate information gain for all possible features, and pick the one with the highest information gain</li>
+<li>Split dataset according to selected feature, and create left and right branches of the tree</li>
+<li>Keep repeating splitting process until stopping criteria is met
+<ol>
+<li>When a node is 100% one class</li>
+<li>When splitting a node will result in the tree exceeding a maximum depth</li>
+<li>Information gain from additional splits is less than threshold</li>
+<li>When number of examples in a node is below a threshold.</li>
+</ol>
+</li>
+</ol>
     </div>
 <div class="post_comments">
   

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mengwoods.github.io/post/hobby/2024-05-23-driver-license/</loc>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/post/dl/005-ng-ml/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -124,7 +127,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -137,7 +140,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/categories/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -149,14 +152,14 @@
                 href="https://mengwoods.github.io/categories/"
                 />
   </url><url>
-    <loc>https://mengwoods.github.io/categories/dl/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <loc>https://mengwoods.github.io/categories/hobby/</loc>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/tags/index/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/post/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -169,7 +172,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/tags/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -180,6 +183,9 @@
                 hreflang="en"
                 href="https://mengwoods.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://mengwoods.github.io/categories/dl/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/categories/math/</loc>
     <lastmod>2024-04-16T00:00:00+00:00</lastmod>
@@ -193,9 +199,6 @@
                 hreflang="en"
                 href="https://mengwoods.github.io/categories/math/"
                 />
-  </url><url>
-    <loc>https://mengwoods.github.io/categories/hobby/</loc>
-    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/tags/docker/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
