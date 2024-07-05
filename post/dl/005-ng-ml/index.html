@@ -9,7 +9,7 @@
   
   >
   <head>
-<title>Note of Machine learning course | Menghao blog</title>
+<title>Note of NG&#39;s Machine Learning Course | Menghao blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,14 +28,14 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="Based on NG Machine Learning course (WIP)." />
+<meta name="description" content="Based on NG&#39;s Machine Learning course (WIP)." />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@janedoe">
-<meta name="twitter:title" content="Note of Machine learning course" />
+<meta name="twitter:title" content="Note of NG&#39;s Machine Learning Course" />
 <meta name="twitter:image" content="https://mengwoods.github.io/images/thumbnail.png"/>
 <meta property="og:url" content="https://mengwoods.github.io/post/dl/005-ng-ml/" />
-<meta property="og:title" content="Note of Machine learning course" />
-<meta property="og:description" content="Based on NG Machine Learning course (WIP)." />
+<meta property="og:title" content="Note of NG&#39;s Machine Learning Course" />
+<meta property="og:description" content="Based on NG&#39;s Machine Learning course (WIP)." />
 <meta property="og:image" content="https://mengwoods.github.io/images/thumbnail.png" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://mengwoods.github.io/icons/apple-touch-icon.png">
@@ -148,7 +148,7 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title">Note of Machine learning course</h1>
+    <h1 class="post_title">Note of NG's Machine Learning Course</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <title>calendar</title>
@@ -157,18 +157,18 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 8 min read</span>
+    <span class="post_time"> · 11 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Note%20of%20Machine%20learning%20course&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f005-ng-ml%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/intent/tweet?text=Note%20of%20NG%27s%20Machine%20Learning%20Course&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f005-ng-ml%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>twitter</title>
   <use xlink:href="#twitter"></use>
 </svg>
 
     </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f005-ng-ml%2f&t=Note%20of%20Machine%20learning%20course" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f005-ng-ml%2f&t=Note%20of%20NG%27s%20Machine%20Learning%20Course" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>facebook</title>
   <use xlink:href="#facebook"></use>
@@ -197,14 +197,15 @@
         <h2>Overview</h2>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#c1---supervised-machine-learning---regression-and-classification">C1 - Supervised Machine Learning - Regression and Classification</a></li>
-    <li><a href="#c2-advanced-learning-algorithms">C2 Advanced Learning Algorithms</a></li>
+    <li><a href="#c1-supervised-machine-learning---regression-and-classification">C1-Supervised Machine Learning - Regression and Classification</a></li>
+    <li><a href="#c2-advanced-learning-algorithms">C2-Advanced Learning Algorithms</a></li>
+    <li><a href="#c3-unsupervised-learning">C3-Unsupervised Learning</a></li>
   </ul>
 </nav>
       </div>
     
-    <div class="post_body"><p>Based on NG Machine Learning course (WIP).</p>
-<h2 id="c1---supervised-machine-learning---regression-and-classification">C1 - Supervised Machine Learning - Regression and Classification</h2>
+    <div class="post_body"><p>Based on NG's Machine Learning course (WIP).</p>
+<h2 id="c1-supervised-machine-learning---regression-and-classification">C1-Supervised Machine Learning - Regression and Classification</h2>
 <blockquote>
 <p>P25 Feature scaling</p>
 </blockquote>
@@ -276,7 +277,7 @@ $f_{w,b}{x}=g(w\cdot x+b)=\dfrac{1}{1+e^{-(w\cdot x + b)}}$</p>
 <blockquote>
 <p>P40 Regularization for linear regression</p>
 </blockquote>
-<h2 id="c2-advanced-learning-algorithms">C2 Advanced Learning Algorithms</h2>
+<h2 id="c2-advanced-learning-algorithms">C2-Advanced Learning Algorithms</h2>
 <blockquote>
 <p>P45 Requirement prediction</p>
 </blockquote>
@@ -512,7 +513,7 @@ Features: list the top 10000 words to compute input variables.</p>
 <p>Choose the feature with the lowest average weighted entropy.</p>
 <p>Information gain.</p>
 <blockquote>
-<p>P95: Putting it together</p>
+<p>P96: Putting it together</p>
 </blockquote>
 <ol>
 <li>Start with all examples at the root node</li>
@@ -527,6 +528,128 @@ Features: list the top 10000 words to compute input variables.</p>
 </ol>
 </li>
 </ol>
+<blockquote>
+<p>P97: Using one-hot encoding of categorical features</p>
+</blockquote>
+<p>If a categorical feature can take on k values, create k binary features.</p>
+<blockquote>
+<p>P98: Continuous features</p>
+</blockquote>
+<blockquote>
+<p>P99: Regression tree</p>
+</blockquote>
+<p>Choose the feature that split the data with lower variance.</p>
+<p>Calculate the weighted variance of a feature to split on.</p>
+<p>Use variance reduction as a measurement. Use the feature with largest variance reduction to split data.</p>
+<blockquote>
+<p>P100: Tree ensembles</p>
+</blockquote>
+<p>Trees are highly sensitive to small changes of the data. Using multiple trees and vote for the final result makes prediction more robust.</p>
+<blockquote>
+<p>P101: Sampling with replacement</p>
+</blockquote>
+<p>To construct a new traning set with a little bit similar but also pretty different from origin training set.</p>
+<blockquote>
+<p>P102: Random forest algorithm</p>
+</blockquote>
+<p>One powerful decision tree (Trees bag) algorithm.</p>
+<p>Given training set of size $m$</p>
+<p>For $b=1$ to $B$:</p>
+<p>Use sampling with replacement to create a new training set of size $m$; Train a decision tree on the new dataset.</p>
+<p>Randomizing the feature choice:
+At each node, when choosing a feature to use to split, if $n$ features are available, pick a random subset of $k&lt;n$ features and allow the algorithm to only choose from that subset of features. (e.g. $k=sqrt(n)$)</p>
+<blockquote>
+<p>P103: XGBoost decision tree</p>
+</blockquote>
+<p>ensamble /ˌɑːnˈsɑːm.bəl/</p>
+<p>It runs quickly, open source implementations are easily used.</p>
+<p>Given training set of size $m$</p>
+<p>For $b=1$ to $B$:</p>
+<p>Use sampling with replacement to create a new training set of size $m$ But instead of picking from all examples with equal (1/m) probability, make it more likely to pick examples that the previously trained trees misclassify.</p>
+<p>Train a decision tree on the new dataset.</p>
+<p>XGBoost (extreme gradient boosting)</p>
+<ul>
+<li>Open source implementation of boosted trees</li>
+<li>Fast efficient implementation</li>
+<li>Good choice of default splitting criteria and criteria for when to stop splitting</li>
+<li>Built in regularization to prevent overfitting</li>
+<li>Highly competitive algorithm for machine learning competitioncs e.g. Kaggle</li>
+</ul>
+<p>Sample for classfication:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XBGClassifier</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+</span></span></code></pre></div><p>Regression:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">XGBegressor</span><span class="p">()</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+</span></span></code></pre></div><blockquote>
+<p>P104 Decision Trees vs Neural Networks</p>
+</blockquote>
+<p>Decision Trees and Tree ensembles</p>
+<ul>
+<li>Work well on tabular (structured) data</li>
+<li>Not recommended for unstructured data, images, audio, text</li>
+<li>Fast</li>
+<li>Small decision trees may be human interpretable</li>
+</ul>
+<p>Neural network</p>
+<ul>
+<li>Works well on all types of data, including tabular and unstructured data.</li>
+<li>May be slower than a decision tree</li>
+<li>Works with transfer learning</li>
+<li>When building a system of multiple models working together, it might easier to string together multiple neural networks.</li>
+</ul>
+<h2 id="c3-unsupervised-learning">C3-Unsupervised Learning</h2>
+<blockquote>
+<p>P107 Clustering</p>
+</blockquote>
+<p>Applications: Grouping similar news, Market segmentation, DNA analysis, Astronomical data analysis.</p>
+<blockquote>
+<p>P108 K-means clustering</p>
+</blockquote>
+<p>Cluster centroid.</p>
+<p>Repeat until converged:</p>
+<p>Step 1: Assign each point to its closest centroid.</p>
+<p>Step 2: Recompute the centroids.</p>
+<blockquote>
+<p>P109 K-means algorithms</p>
+</blockquote>
+<p>Randomly initialize $K$ cluster centroids $\mu_1, \mu_2, ...,\mu_k$.</p>
+<p>Repeat{</p>
+<p>// Assign points to cluster centroids</p>
+<p>for $i=1$ to $m$ training examples</p>
+<p>$c^{(i)}:=$index (from 1 to K) of cluster centroid closest to $x^{(i)}$</p>
+<p>// Move cluster centroids</p>
+<p>for $k=1$ to K,</p>
+<p>$\mu_k:=$ average of points assigned to cluster $k$</p>
+<p>}</p>
+<blockquote>
+<p>P110 Clustering, Optimazation objective</p>
+</blockquote>
+<p>$c^{(i)}=$ index of cluster to which example $x^{(i)} is currently assigned$</p>
+<p>$\mu_k=$ cluster centroid $k$</p>
+<p>$\mu_c(i)=$ cluster centroid of cluster to which example $x^{(i)}$ has been assigned</p>
+<p>Cost function (Distortion function)</p>
+<p>$$J(c, \mu) = \frac{1}{m}\sum_{i=1:m}||x-\mu_{c}||$$</p>
+<blockquote>
+<p>P111 Initilizing K-means</p>
+</blockquote>
+<p><strong>Randomly initialization</strong></p>
+<p>Choose $K&lt;m$, clusters number is smaller than traing exampings.</p>
+<p>Randomly pick K training examples, set centroids equal to these K examples.</p>
+<p>To avoid local optima, can run K-means multiple times, and pick the clustering result that gave the lowest cost.</p>
+<blockquote>
+<p>P112 Choossing the number of clusters.</p>
+</blockquote>
+<p>Elbow method: Try K clusters and plot the cost function value, pick the point looks like elbow position.</p>
+<p>More common method: Evaluate K-means based on a metric for how well it performs for that later purpose.</p>
+<blockquote>
+<p>P113 Anomaly detection</p>
+</blockquote>
     </div>
 <div class="post_comments">
   
