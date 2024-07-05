@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mengwoods.github.io/post/hobby/2024-05-23-driver-license/</loc>
-    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mengwoods.github.io/post/dl/005-ng-ml/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -46,9 +43,6 @@
                 hreflang="en"
                 href="https://mengwoods.github.io/post/math/003-pca/"
                 />
-  </url><url>
-    <loc>https://mengwoods.github.io/post/hobby/000-paintings/</loc>
-    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/post/tech/002-run-conda-in-dockerfile/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
@@ -152,6 +146,9 @@
                 href="https://mengwoods.github.io/categories/"
                 />
   </url><url>
+    <loc>https://mengwoods.github.io/post/hobby/2024-05-23-driver-license/</loc>
+    <lastmod>2024-05-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/categories/hobby/</loc>
     <lastmod>2024-05-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -199,6 +196,9 @@
                 hreflang="en"
                 href="https://mengwoods.github.io/categories/math/"
                 />
+  </url><url>
+    <loc>https://mengwoods.github.io/post/hobby/000-paintings/</loc>
+    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/tags/docker/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
