@@ -145,6 +145,16 @@
   </url><url>
     <loc>https://mengwoods.github.io/categories/hobby/</loc>
     <lastmod>2024-05-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/hobby/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/hobby/"
+                />
   </url><url>
     <loc>https://mengwoods.github.io/tags/index/</loc>
     <lastmod>2024-05-23T00:00:00+00:00</lastmod>
@@ -235,20 +245,11 @@
     <loc>https://mengwoods.github.io/tags/ros2/</loc>
     <lastmod>2024-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mengwoods.github.io/post/hobby/2023-12-08-grain-brain/</loc>
-    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mengwoods.github.io/categories/reading/</loc>
-    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mengwoods.github.io/post/hobby/2024-01-30-fund/en/</loc>
     <lastmod>2023-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/categories/investment/</loc>
     <lastmod>2023-12-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mengwoods.github.io/post/hobby/2023-11-15-beauty-of-math/cn/</loc>
-    <lastmod>2023-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/post/hobby/2024-05-13-honey-take-my-hand/</loc>
     <lastmod>2023-11-04T00:00:00+00:00</lastmod>

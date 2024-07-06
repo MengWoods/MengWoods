@@ -164,6 +164,25 @@
                 href="https://mengwoods.github.io/cn/categories/code/"
                 />
   </url><url>
+    <loc>https://mengwoods.github.io/cn/post/hobby/2023-12-08-grain-brain/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/hobby/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/hobby/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/categories/reading/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/cn/tags/andriod/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -195,6 +214,9 @@
   </url><url>
     <loc>https://mengwoods.github.io/cn/post/tech/004-as-folder-functios/cn/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/post/hobby/2023-11-15-beauty-of-math/cn/</loc>
+    <lastmod>2023-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/docker/</loc>
     <lastmod>2023-11-04T00:00:00+00:00</lastmod>
