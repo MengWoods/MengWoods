@@ -90,22 +90,22 @@
     <a href="https://mengwoods.github.io/" class="nav_item" title="Home">Home </a>
   </div>
   <div class="nav_parent">
-    <a href="https://mengwoods.github.io/categories/math/" class="nav_item" title="Math">Math </a>
+    <a href="https://mengwoods.github.io/categories/math/" class="nav_item" title="Mathematics">Mathematics </a>
   </div>
   <div class="nav_parent">
-    <a href="https://mengwoods.github.io/categories/dl/" class="nav_item" title="DL">DL </a>
+    <a href="https://mengwoods.github.io/categories/dl/" class="nav_item" title="Deep Learning">Deep Learning </a>
   </div>
   <div class="nav_parent">
     <a href="https://mengwoods.github.io/categories/tech/" class="nav_item" title="Tech">Tech </a>
   </div>
   <div class="nav_parent">
-    <a href="https://mengwoods.github.io/categories/code/" class="nav_item" title="Code">Code </a>
+    <a href="https://mengwoods.github.io/categories/code/" class="nav_item" title="Program">Program </a>
   </div>
   <div class="nav_parent">
-    <a href="https://mengwoods.github.io/categories/hobby/" class="nav_item" title="Hobby">Hobby </a>
+    <a href="https://mengwoods.github.io/categories/hobby/" class="nav_item" title="Other">Other </a>
   </div>
   <div class="nav_parent">
-    <a href="https://mengwoods.github.io/about/" class="nav_item" title="About">About </a>
+    <a href="https://mengwoods.github.io/about/" class="nav_item" title="About Me">About Me </a>
   </div>
       
       <div class="nav_parent">
@@ -157,7 +157,7 @@
 </span>
     <span class="post_date">
       Apr 25, 2024</span>
-    <span class="post_time"> · 11 min read</span>
+    <span class="post_time"> · 13 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -650,6 +650,103 @@ At each node, when choosing a feature to use to split, if $n$ features are avail
 <blockquote>
 <p>P113 Anomaly detection</p>
 </blockquote>
+<p>Density estimation</p>
+<p>Example:</p>
+<p>Fraud detection, Model features of user;s activities from data. Identify unusual users by checking which have less probability.</p>
+<blockquote>
+<p>P114 Gaussian Distribution</p>
+</blockquote>
+<p>$x$ is a distributed Gaussian with mean $\mu$, $\sigma^2$ variance. $\sigma$ is standard deviation.</p>
+<p>$p(x)=\frac{1}{\sqrt{2\pi}\sigma} e^{\frac{-(x-\mu)^2}{2\sigma^2}}$</p>
+<p>$\mu=\frac{1}{m}\sum x_i$</p>
+<p>$\sigma^2=\frac{1}{m}\sum(x_i-\mu)^2$</p>
+<blockquote>
+<p>P115 Algorithm</p>
+</blockquote>
+<p>Training set: ${x^{(1)},x^{(2)},...,x^{(m)}}$
+Each example $x_i$ has $n$ features.</p>
+<p>$p(x)=\Pi_{j=1}^{n} p(x_j;\mu_j,\sigma_j^2)$</p>
+<ol>
+<li>
+<p>Choose $n$ features $x_i$ that you think might be indicative of anomalous examples.</p>
+</li>
+<li>
+<p>Fit parameters $\mu_1,...,\mu_n,\sigma_1^2,...\sigma_n^2$</p>
+<p>$\mu_j=\frac{1}{m}\sum x_j^{(i)}$</p>
+<p>$\sigma_j^2=\frac{1}{m}(x_j^{(i)}-\mu_j)^2$</p>
+</li>
+<li>
+<p>Given a new example $x$, compute</p>
+<p>$p(x)=\Pi_{j=1}^np(x_j;\mu_j,\sigma_j^2)$</p>
+<p>Anomaly if $p(x)&lt;\epsilon$</p>
+</li>
+</ol>
+<blockquote>
+<p>P116 Developing and evaluatiing an anomly detection system</p>
+</blockquote>
+<p>Have some labled data.</p>
+<p>Training set is unlabled dataset, assume those are normal (or anomalous).</p>
+<p>Cross validation set.</p>
+<p>Test set.</p>
+<p>Cross validation and test sets include a few anomalous examples.</p>
+<p><strong>Aircraft engines monitoring example</strong></p>
+<p>10000 good engines, 20 flawed engines</p>
+<p>Training set: 6000 good engines.</p>
+<p>CV: 2000 good engines, 10 anomalous</p>
+<p>Test: 2000 good engines, 10 anomalous</p>
+<p>Train the algorithm using training set, verify the anomly detection performance on CV. Tuning $\epsilon$ on CV. Test result on Test set.</p>
+<p>Alternative:</p>
+<p>Training set: 6000 good engines; CV: 4000 good engines, 20 anomalous; No test set.</p>
+<blockquote>
+<p>Anomaly Detection VS. Supervised Learning</p>
+</blockquote>
+<p>Anomaly detection</p>
+<ul>
+<li>
+<p>Very small number of positive examples. (0-20 is common), Large number of negative examples</p>
+</li>
+<li>
+<p>Many different types of anomalies. hard for any algorithm to learn from positive examples what the anomalies look like; future anomalies may look nothing like any of the anomalous examples we've seen so far.</p>
+</li>
+<li>
+<p>Fraud detection</p>
+</li>
+<li>
+<p>Manufacturing - finding new previously unseen defects.</p>
+</li>
+<li>
+<p>Monitoring machines in a data center.</p>
+</li>
+</ul>
+<p>Supervised learning</p>
+<ul>
+<li>
+<p>Large number of positive and negative examples.</p>
+</li>
+<li>
+<p>Enough positive examples for algorithm to get a sense of what positive examples are like, future positve example likely to be similar to ones in training set.</p>
+</li>
+<li>
+<p>Email spam classification.</p>
+</li>
+<li>
+<p>Manufacturing - Finding known, previously seen defects.</p>
+</li>
+<li>
+<p>Weather prediction.</p>
+</li>
+<li>
+<p>Deseases classification.</p>
+</li>
+</ul>
+<blockquote>
+<p>P118 Choosing what features to use</p>
+</blockquote>
+<p><strong>Non-gaussian features</strong></p>
+<p>Transform feature to more like Gaussian distribution.</p>
+<p>Log, Square, Sqrt, etc.</p>
+<p><strong>Error analysis for anomaly detection</strong></p>
+<p>Choose features that might take on unusually large or small values in the event of an anomaly.</p>
     </div>
 <div class="post_comments">
   
