@@ -4,10 +4,12 @@
   lang="en"
   data-figures=""
   
+    class="page"
+  
   
   >
   <head>
-<title>AI | Menghao blog</title>
+<title>An Introduction to the Fundamentals of Reinforcement Learning | Menghao blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,23 +27,24 @@
 
 <meta property="og:locale" content="en" />
 
+<meta property="og:locale:alternate" content="cn" />
+
 <meta property="og:type" content="article">
-<meta name="description" content="" />
+<meta name="description" content="Fundamentals of Reinforcement Learning" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@janedoe">
-<meta name="twitter:title" content="AI" />
+<meta name="twitter:title" content="An Introduction to the Fundamentals of Reinforcement Learning" />
 <meta name="twitter:image" content="https://mengwoods.github.io/images/thumbnail.png"/>
-<meta property="og:url" content="https://mengwoods.github.io/tags/ai/" />
-<meta property="og:title" content="AI" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="https://mengwoods.github.io/post/dl/008-drl-summary/" />
+<meta property="og:title" content="An Introduction to the Fundamentals of Reinforcement Learning" />
+<meta property="og:description" content="Fundamentals of Reinforcement Learning" />
 <meta property="og:image" content="https://mengwoods.github.io/images/thumbnail.png" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://mengwoods.github.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://mengwoods.github.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://mengwoods.github.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://mengwoods.github.io/tags/ai/">
-<link rel="alternate" type="application/rss+xml" href="https://mengwoods.github.io/tags/ai/index.xml" title="Menghao blog" />
+<link rel="canonical" href="https://mengwoods.github.io/post/dl/008-drl-summary/">
 
 
 
@@ -144,19 +147,10 @@
 </header>
 
     <main>
-
-
-
+  
 <div class="grid-inverse wrap content">
-  <div>
-    <ul class="posts" id="posts">
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://mengwoods.github.io/post/tech/001-install-openmm3d-lib/en/" title="MMDetection3D Library Installation Guide">MMDetection3D Library Installation Guide</a>
-      </h3>
-      
+  <article class="post_content">
+    <h1 class="post_title">An Introduction to the Fundamentals of Reinforcement Learning</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <title>calendar</title>
@@ -164,21 +158,19 @@
 </svg>
 </span>
     <span class="post_date">
-      Oct 30, 2023</span>
-    <span class="post_time"> · 2 min read</span><span>&nbsp;· <a href='https://mengwoods.github.io/tags/ai/' title="AI" class="post_tag button button_translucent">AI
-        </a>
-    </span>
+      Jul 7, 2024</span>
+    <span class="post_time"> · 11 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=MMDetection3D%20Library%20Installation%20Guide&url=https%3a%2f%2fmengwoods.github.io%2fpost%2ftech%2f001-install-openmm3d-lib%2fen%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/intent/tweet?text=An%20Introduction%20to%20the%20Fundamentals%20of%20Reinforcement%20Learning&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f008-drl-summary%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>twitter</title>
   <use xlink:href="#twitter"></use>
 </svg>
 
     </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2ftech%2f001-install-openmm3d-lib%2fen%2f&t=MMDetection3D%20Library%20Installation%20Guide" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f008-drl-summary%2f&t=An%20Introduction%20to%20the%20Fundamentals%20of%20Reinforcement%20Learning" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>facebook</title>
   <use xlink:href="#facebook"></use>
@@ -192,7 +184,7 @@
 </svg>
 
     </a>
-    <a href="https://mengwoods.github.io/post/tech/001-install-openmm3d-lib/en/" title="Copy Link" class="link link_yank">
+    <a href="https://mengwoods.github.io/post/dl/008-drl-summary/" title="Copy Link" class="link link_yank">
       <svg class="icon">
   <title>copy</title>
   <use xlink:href="#copy"></use>
@@ -203,148 +195,120 @@
   </span>
   </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            Cuda, Conda, MMDetection3D installation and test.
-          
-          <br>
-          <a href="https://mengwoods.github.io/post/tech/001-install-openmm3d-lib/en/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
+      <div class="post_toc">
+        <h2>Overview</h2>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#mathematical-foundations">Mathematical Foundations</a>
+      <ul>
+        <li><a href="#value-function">Value Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#key-reinforcement-learning-algorithms">Key Reinforcement Learning Algorithms</a>
+      <ul>
+        <li><a href="#deep-q-network">Deep Q-Network</a></li>
+        <li><a href="#dueling-network-architecture">Dueling Network Architecture</a></li>
+        <li><a href="#policy-gradient">Policy Gradient</a></li>
+        <li><a href="#actor-critic-algorithm">Actor-Critic Algorithm</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
       </div>
-    </div>
-  </li>
-
-      <li>
-      </li>
-    </ul>
-  </div>
-<aside class="sidebar">
-  <section class="sidebar_inner">
-    <br>
     
+    <div class="post_body"><p>Fundamentals of Reinforcement Learning</p>
+<h2 id="background">Background</h2>
+<p>Reinforcement Learning (RL) is a powerful and rapidly advancing branch of machine learning, inspired by behavioral psychology. It focuses on how agents should take actions in an environment to maximize some notion of cumulative reward. Unlike supervised learning, where the learning agent is given input-output pairs, reinforcement learning emphasizes learning from interaction.</p>
+<h2 id="mathematical-foundations">Mathematical Foundations</h2>
+<p>The RL problem is meant to be a straightforward framing of the problem of learning from interaction with environments $\mathcal{E}$ over several discrete time steps to achieve a goal. At each time step $t$, the agent receives a state ${s}<em>{t}$ in the environment's state space $\mathcal{S}$ and selects an action, $a_t \in \mathcal {A}(s_t)$ according to a policy $\pi({a}</em>{t}|{s}<em>{t})$, where $\mathcal{A}(s_t)$ is the set of actions available in state $s_t$. The policy amounts to a conditional probability $\pi(a|s)$ of the agent taking action if the current state is $s$. It is a mapping from state and action to the probability of taking an action. After that, the agent will receive a scalar reward ${r}</em>{t}$ and store the transition in the agent's memory as experiences. The process continues until the agent reaches a terminal state. The agent seeks to learn a policy ${ \pi }^{ \ast }$ that maximizes the expected discounted return ${ R }_{ t }=\sum <em>{ k=0 }^{ \infty  }{ { \gamma  }^{ k }{ r }</em>{ t+k } }$, accumulated reward with the discount factor $\gamma \in (0,1]$ trades-off the importance of immediate and future rewards.</p>
+<p>RL tasks that satisfy the Markov property can be described as Markov decision processes (MDPs), which are defined by a tuple $(\mathcal{S},\mathcal{A},\mathcal{P},\mathcal{R},\gamma)$, where $\mathcal{R}$ is a reward function $\mathcal{R}(s,a)$ and $\mathcal{P}$ is a state transition probability $\mathcal{P}({s}<em>{t+1}|{s}</em>{t},{a}<em>{t})$. The Markov property indicates the future states are conditionally independent of the past given the present. So, in an RL task, the decisions and values are assumed to be a function only of the current state. Markov property can be defined as $p({ s }</em>{ t+1 }|{ s }<em>{ 1 },{ a }</em>{ 1 },...,{ s }<em>{ t },{ a }</em>{ t }) = p({ s }<em>{ t+1 }|{ s }</em>{ t },{ a }<em>{ t })$ , which means the future states are conditionally independent of the past given the present. RL task which satisfies Markov property can be described as MDPs, defined by the 5-tuple $(\mathcal{S},\mathcal{A},\mathcal{P},\mathcal{R},\gamma)$, where $\mathcal{R}$ is reward function $\mathcal{R}(s,a)$ and $\mathcal{P}$ is state transition probability $\mathcal{P}({s}</em>{t+1}|{s}<em>{t},{a}</em>{t})$. In an episodic task, the state will reset after each episode of length, and the sequence of states, actions, and rewards in an episode constitute a trajectory or rollout of the policy.</p>
+<h3 id="value-function">Value Function</h3>
+<p>Value functions are a core component of RL systems, which constructs a function approximator that estimates the long-term reward from any state. It estimates how good (expected return) it is for an agent to be in a given state (or given action in a given state). By this way, the function approximator exploits the structure in the state space to efficiently learn the value of observed states and generalize to the value of similar, unseen states. A typical form of value function can be defined as:</p>
+<p>$${ V }^{ \pi  }(s)=\mathbb{ E }[R|s,\pi ]= \mathbb{E}[\sum <em>{ k=0 }^{ \infty  }{ { \gamma  }^{ k }{ r }</em>{ t+k } }|s,\pi] $$</p>
+<p>Normally we refer to ${ V }^{ \pi  }(s)$ as the state-value function, which measures the expected discounted return when starting in a state $s$ and following a policy $\pi$. When actions follow by the optimal policy ${\pi}^{\ast}$, the state-value function can be optimal:</p>
+<p>$${ V }^{ \ast }(s)=\max _{ \pi  }{ { V }^{ \pi  }(s) } \quad \forall s\in \mathcal{ S }$$</p>
+<p>In addition to measuring the value of states, there is also an indicator for measuring the quality of actions' selection, which is denoted as state-action-value or quality function ${Q}^{\pi}(s,a)$. It defines the value of choosing an action $a$ from a given state $s$ and thereafter following a policy $\pi$.</p>
+<p>$${ Q }^{ \pi  }(s,a)=\mathbb{ E }[R|s,a,\pi ]= \mathbb{E}[\sum <em>{ k=0 }^{ \infty  }{ { \gamma  }^{ k }{ r }</em>{ t+k } }|s,a,\pi] $$</p>
+<p>State-action-value is similar to the state value $V^{\pi}$ except the initial action $a$ is provided, and the policy $\pi$ is only followed from the succeeding state onwards. The optimal state-action-value function is denoted as:</p>
+<p>$${ Q }^{ \ast  }(s,a)=\max _{ \pi  }{ { Q }^{ \pi  }(s,a) }  \quad \forall s\in \mathcal{ S } , \forall a\in \mathcal{ A } $$</p>
+<p>${ Q }^{ \ast  }(s,a)$ gives the maximum state-action value for state $s$ and action $a$ achievable by any policy.
+This action value function satisfies a recursive property, which is a fundamental property of value functions in the RL setting, and it expresses a relationship between the value of a state and its successor states:</p>
+<p>$${Q}^{\pi}(s,a)=\mathbb{E}<em>{{s}^{\prime}}[r+\gamma\mathbb{E}</em>{{a}^{\prime}\sim{\pi}({s}^{\prime})}[{Q}^{\ast}({s}^{\prime},{a}^{\prime})]|s,a,\pi] $$</p>
+<p>Unlike producing absolute state-action values as with $Q^{\pi}$, an advantage function represents relative state-action values, which measures whether or not the action is better or worse than the policy's default behavior. Often, it is easier to learn that action yields higher reward than another, than it is to learn the actual return from taking one particular action. Advantage function expresses a relative advantage of actions through this simple relationship:</p>
+<p>$${ A }^{ \pi  }(s,a)={ Q }^{ \pi  }(s,a)-{ V }^{ \pi  }(s) $$</p>
+<p>Many successful value-based RL algorithms rely on the idea of advantage updates.</p>
+<h2 id="key-reinforcement-learning-algorithms">Key Reinforcement Learning Algorithms</h2>
+<h3 id="deep-q-network">Deep Q-Network</h3>
+<p>Deep reinforcement learning (DRL) applies deep neural nets for representing the value functions within reinforcement learning methods. DRL algorithms have attained superhuman performance in several challenging task domains to attribute to the powerful function approximation and representation learning properties of the DL. The DQN algorithm achieves human-level performance on Atari series games from pixels input. It parameterizes the quality function $Q$ with a neural network $Q(s,a;\theta)$ that approximates the $Q$ values. Two main techniques of the DQN algorithm can learn value functions in a stable and robust way are using the target network and experience replay. At each iteration, the network's parameters are updated by minimizing the following loss function:</p>
+<p>$${L}<em>{i}({\theta}</em>{i})=\mathbb{E}<em>{s,a,r,{s}^{\prime}}[{({y}</em>{i}^{DQN}-Q(s,a;{\theta}_{i}))^{2}]}$$</p>
+<p>with</p>
+<p>$${y}_{i}^{DQN}=r+\gamma \underset {{a}^{\prime}}{max}Q({s}^{\prime},{a}^{\prime};{\theta}^{-}) $$</p>
+<p>in which ${\theta}^{-}$ is the parameter for the target network. The first stabilizing method is fixing the target network's parameters rather than calculating the TD error based on its own rapidly fluctuating estimates of the $Q$-values. The second one, experience replay, uses a buffer for storing a certain size of transitions $({s}<em>{t},{a}</em>{t},{s}<em>{t+1},{r}</em>{t+1},)$ makes it possible for training off-policy and enhancing the efficiency of sampling data.</p>
+<p>There is a series of improvements in the value-based RL setting after the DQN algorithm ignited this field. To reduce the overestimated $Q$-values in DQN, van Hasselt et al. proposed the double DQN algorithm. Wang et al. presented a dueling Q-network architecture to estimate state-value function $V(s)$ and associated advantage function $A(s,a)$ respectively. Tamar et al. proposed a value iteration network that can effectively learn to plan, and it leads to better generalization in many RL tasks. Schaul et al. developed the PER approach built on top of double DQN, it makes the experience replay process more efficient and effective than all transitions are replayed uniformly.</p>
+<h3 id="dueling-network-architecture">Dueling Network Architecture</h3>
+<p>Unlike the standard single sequence $Q$-networks design, the dueling network structure consists of two sequences (streams) of networks (A-network and V-network) which separately learn action-advantage function and state-value function. This construction decouples the value and advantage functions and combines the two streams to produce the estimate of the state-action value function with a special aggregating module. The two streams share a common feature extraction layer (or lower layers). The deep $Q$-network focuses on estimating every state-action pairs' value. However, the idea of dueling network is to estimate action-independent state function and action-dependent advantage function separately, because in RL environments, not all states are related to a specific action, there are many states independent of action, and under these states the agent does not need to change actions to adapt to the new states. Therefore, it is meaningless and inefficient to estimate such state-action pairs' value. Dueling network firstly presented by Wang et al. and through this change, the training efficiency has been greatly improved than the single-stream $Q$ networks. The dueling network results in a new state of the art for tasks in the discrete action space according to Wang's work. Shortly, the $Q$-values generated by dueling network are more advantageous to the performance improvement than deep $Q$-network in an RL task.</p>
+<h3 id="policy-gradient">Policy Gradient</h3>
+<p>The methods mentioned above indirectly learn the policy $\pi(s)$ based on the estimate of the value functions. These value-based approaches are effective in handling problem in a discrete actions field. However, when dealing with a problem with a continuous action space such as physical control tasks, the value-based approaches cannot be straightforwardly applied, and it is difficult to ensure the results' convergence since it relies on each actions' $Q$ value. An obvious approach to implement value-based algorithms such as DQN to continuous domains is to discretize the action space to several fixed actions. However, it has many drawbacks and limitations such as throwing information (maybe essential) about the structure of the action domain.</p>
+<p>There is no such worry in policy-based approaches since the policy network output agent's actions without the estimation of the action-value function. They directly parameterize the control policy $\pi(a|s;\theta)$ and update the parameters $\theta$ to optimize the cumulative reward, therefore, policy-based methods are more applicable to continuous control problem such as tasks of robotic controls than the value-based methods.</p>
+<p>Policy gradient (PG) is an appealing policy-based algorithm which optimizes the parametric policy ${\pi}<em>{\theta}(a|s)=\mathbb{P}[a|s;\theta]$ following the gradient ${\nabla}</em>{\theta}J({\pi}<em>{\theta})$ of its expectation of cumulative reward with respect to the policy parameters. Policy-gradient methods are effective in high-dimensional or continuous action spaces, and can learn stochastic policies. In an RL task, the agent's goal is to find parameter $\theta$ maximizes the objective function $J(\pi)$. A typical performance objective to be considered is the average reward function: $J(\pi)=\mathbb{E}[R|{\pi}</em>{\theta}]$. The policy-gradient theorem provides the gradient of $J$ with respect to the parameters $\theta$ of policy $\pi$:</p>
+<p>$${\nabla}<em>{\theta}J({\pi}</em>{\theta})=\int <em>{\mathcal{S}}^{  }{{\rho}^{\pi} }\int</em>{\mathcal{A}}^{  }{{\nabla}<em>{\theta}}{\pi}</em>{\theta}(a|s){Q}^{ \pi}(s,a)dads \
+\quad\quad\quad\quad=\mathbb{E}<em>{s\sim{\rho}^{\pi},a\sim {\pi}^{\theta}}[{\nabla}</em>{\theta} log{\pi}^{\theta}(a|s){Q}^{\pi}(s,a)] $$</p>
+<p>Where the ${\rho}^{\pi}(s)$ is the state distribution. The unknown part, ${Q}^{\pi}(s,a)$ is normally estimated by using the actual returns ${ R }_{ t }=\sum <em>{ k=0 }^{ \infty  }{ { \gamma  }^{ k }{ r }</em>{ t+k } }$ as an approximation for each ${Q}^{\pi}(s_t,a_t)$. Based on this theorem, Silver et al. proposed a deterministic policy-gradient (DPG) algorithm for estimating gradient and it is more efficient than the usual stochastic policy-gradient method. O'Donoghue et al. referred to a new technique by combining PGQL and discussed the practical implementation of this technique in RL setting.</p>
+<h3 id="actor-critic-algorithm">Actor-Critic Algorithm</h3>
+<p>Regular policy-gradient methods often exhibit slow convergence due to the large variances of the gradient estimates. The actor-critic methods attempt to reduce the variance by adopting a critic network to estimate the value of the current policy, which is then used to update the actor's policy parameters in a direction of performance improvement.</p>
+<p>The action-selection policy is known as the actor ${\pi}<em>{\theta}:\mathcal{S}\rightarrow \mathcal{A}$, which make decisions without the need for optimization procedures on a value function, mapping representation of the states to action-selection probabilities . The~value function is known as the critic ${Q}</em>{\phi}^{\pi}: \mathcal{S} \times \mathcal{A} \rightarrow \mathbb{R}$, which estimates the expected return to reduce variance and accelerate learning, mapping states to expected cumulative future reward.</p>
+<p>The actor and critic are two separated networks share a common observation. At each step, the action selected by actor network is also an input factor to the critic network. In the process of policy improvement, the critic network estimates the state-action value of the current policy by DQN, then actor network updates its policy in a direction improves the $Q$-value. Compared with the previous pure policy-gradient methods, which do not have a value function, using a critic network to evaluate the current policy is more conducive to convergence and stability. The better the state-action value evaluation is, the lower the learning performance's variance is. It is important and helpful to have a better policy evaluation in the critic network.</p>
+<p>Policy-gradient-based actor-critic algorithms are useful in many real-life applications because they can search for optimal policies using low-variance gradient estimates. Lillicrap et al. presented the DDPG algorithm, which combines the actor-critic approach with insights from DQN, to solve simulated physics tasks and it has been widely used in many robotic control tasks. It uses two neural networks; the actor network learns a deterministic policy and the critic network approximates the Q-function of the current policy.</p>
+<h2 id="summary">Summary</h2>
+<p>Reinforcement Learning (RL) represents a powerful paradigm in machine learning, drawing inspiration from behavioral psychology to enable agents to make decisions that maximize cumulative rewards in complex environments. Formulated as Markov Decision Processes (MDPs), RL tasks involve states, actions, rewards, and transition probabilities. Algorithms such as Deep Q-Networks (DQN) leverage deep neural networks to approximate Q-values efficiently, facilitating decision-making in discrete action spaces.</p>
+<p>Value-based RL methods, exemplified by DQN, estimate state-action values to optimize policies. Actor-critic approaches improve upon traditional policy-gradient methods by incorporating a critic network to estimate value functions, thereby reducing variance and enhancing learning stability. These advancements extend to continuous action spaces with algorithms like Deep Deterministic Policy Gradient (DDPG), which combines deterministic policies and Q-function approximations.</p>
+<p>Policy-gradient methods directly optimize policies based on gradient estimates of expected rewards, proving effective in scenarios with continuous action spaces. The dueling network architecture further refines training efficiency by separating state-value and advantage functions, emphasizing action-dependent advantages.</p>
+<p>Overall, RL continues to evolve through innovations in value estimation, policy optimization, and application across diverse domains such as robotics and game playing. Advances in neural network architectures and learning algorithms continue to drive progress in RL research and application. Recent trends focus on adapting RL to continuous action spaces, integrating with other domains like NLP and computer vision, and improving sample efficiency and training stability. Future directions include enhancing RL's applicability to real-world challenges through interdisciplinary collaborations and addressing ethical considerations in deployment.</p>
+    </div>
+<div class="post_comments">
   
-  <div class="search">
-    <input type="search" class="search_field form_field" placeholder='Search...' id="find" autocomplete="off" data-scope='tags'>
-    <label for="find" class="search_label"><svg class="icon">
-  <title>search</title>
-  <use xlink:href="#search"></use>
-</svg>
-
-    </label>
-    
-    <div class="search_results results"></div>
-  </div>
-
-        <h2>Menghao</h2>
-      <div class="author_bio">
-        Technologist
-      </div>
-      <a href='https://mengwoods.github.io/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
-
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
     
     
-    <h2 class="mt-4">Recent Posts</h2>
-    <ul class="flex-column">
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/008-drl-summary/" class="nav-link" title="An Introduction to the Fundamentals of Reinforcement Learning">An Introduction to the Fundamentals of Reinforcement Learning</a>
-      </li>
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/005-ng-ml/" class="nav-link" title="Note of NG&#39;s Machine Learning Course">Note of NG's Machine Learning Course</a>
-      </li>
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/001-probability/" class="nav-link" title="Probability Knowledge for Deep Learning">Probability Knowledge for Deep Learning</a>
-      </li>
-    </ul>
-    <div>
-      <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
-      <nav class="tags_nav">
-        <a href='https://mengwoods.github.io/categories/tech/' class="post_tag button button_translucent" title="tech">
-          TECH
-          <span class="button_tally">5</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/code/' class="post_tag button button_translucent" title="code">
-          CODE
-          <span class="button_tally">4</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/hobby/' class="post_tag button button_translucent" title="hobby">
-          HOBBY
-          <span class="button_tally">4</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/dl/' class="post_tag button button_translucent" title="dl">
-          DL
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/math/' class="post_tag button button_translucent" title="math">
-          MATH
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/investment/' class="post_tag button button_translucent" title="investment">
-          INVESTMENT
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
-      <nav class="tags_nav">
-        <a href='https://mengwoods.github.io/tags/c&#43;&#43;/' class="post_tag button button_translucent" title="c&#43;&#43;">
-          C&#43;&#43;
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/docker/' class="post_tag button button_translucent" title="docker">
-          DOCKER
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/ai/' class="post_tag button button_translucent" title="ai">
-          AI
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/hugo/' class="post_tag button button_translucent" title="hugo">
-          HUGO
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/index/' class="post_tag button button_translucent" title="index">
-          INDEX
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/leetcode/' class="post_tag button button_translucent" title="leetcode">
-          LEETCODE
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/ros2/' class="post_tag button button_translucent" title="ros2">
-          ROS2
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/web/' class="post_tag button button_translucent" title="web">
-          WEB
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-  </section>
-</aside>
-
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-mengwoods-github-io-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+  
 </div>
 
 
+<div class="post_i18n">
+  <h3 class="mb-0">Translations:</h3>
+  <nav class="tags_nav">
+    
+      <a href="https://mengwoods.github.io/cn/post/dl/008-drl-summary/" class="post_tag button button_translucent">Chinese</a> 
+      
+    
+    </nav>
+</div>
+
+
+
+  </article>
+</div>
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>强化学习理论基础介绍</title>
+      <link>https://mengwoods.github.io/cn/post/dl/008-drl-summary/</link>
+      <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/dl/008-drl-summary/</guid>
+      <description>
+        
+          
+            &lt;p&gt;强化学习理论基础&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>深度学习中的概率知识</title>
       <link>https://mengwoods.github.io/cn/post/dl/001-probability/</link>
