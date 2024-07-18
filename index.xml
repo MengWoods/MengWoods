@@ -312,40 +312,5 @@
       </description>
     </item>
     
-    <item>
-      <title>TODO List</title>
-      <link>https://mengwoods.github.io/post/todolist/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengwoods.github.io/post/todolist/</guid>
-      <description>
-        
-          
-            Other:
-Driver license school Tooth check Math:
-rotation matrix， matrix multiplication meaning， in robotiics covariance matrix Bayesian formula and application SVM Nearest neighbor regression Jacobean DL:
-SVM application example Kaggle applications, LSTM etc. Regrassion Binary classification Multi class classification Pub RL code Json data read Gradient descent with python, y = a sqrt(x) + b, estimate a and b Read pytorch model code Build a cnn network, kernel size, pooling size, etc.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mengwoods.github.io/post/tech/note/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengwoods.github.io/post/tech/note/</guid>
-      <description>
-        
-          
-            1[ERROR] [1712251587.444260]: bad callback: &amp;lt;bound method TerrainSegmentation.callback of &amp;lt;__main__.TerrainSegmentation object at 0x7fee81788110&amp;gt;&amp;gt; 2Traceback (most recent call last): 3 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py&amp;#34;, line 750, in _invoke_callback 4 cb(msg) 5 File &amp;#34;/home/m/Workspace/catkin-ws-odts/install/ganav_terrain_segmentation/lib/ganav_terrain_segmentation/terrain_segmentation.py&amp;#34;, line 60, in callback 6 cv_image = self.bridge.imgmsg_to_cv2(data, desired_encoding=&amp;#34;rgb8&amp;#34;) 7 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 163, in imgmsg_to_cv2 8 dtype, n_channels = self.encoding_to_dtype_with_channels(img_msg.encoding) 9 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 99, in encoding_to_dtype_with_channels 10 return self.cvtype2_to_dtype_with_channels(self.encoding_to_cvtype2(encoding)) 11 File &amp;#34;/opt/ros/noetic/lib/python3/dist-packages/cv_bridge/core.py&amp;#34;, line 91, in encoding_to_cvtype2 12 from cv_bridge.
-          
-          
-        
-      </description>
-    </item>
-    
   </channel>
 </rss>
