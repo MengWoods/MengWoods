@@ -162,7 +162,7 @@
 </span>
     <span class="post_date">
       Apr 11, 2024</span>
-    <span class="post_time"> · 7 min read</span>
+    <span class="post_time"> · 8 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
@@ -213,16 +213,16 @@
     <div class="post_body"><p>Based on <em>Deep Learning (2017, MIT)</em> book.</p>
 <h2 id="1-overview">1 Overview</h2>
 <p>Mordern dataset such as web indexing, high resolution image, meteorology, experimental measurement, etc., often contains high dimensionality features that they can be unclear, redundant, or even deceptive. It is challenging to visualize and interpret the relationships between variables, and the trained neural netwokr models with such high dimensionaly data are tend to overfitting (<strong>curse of dimensionality</strong>).
-Principle Components Analysis (PCA) is one simple but powerful <strong>unsupervised machine learning technique</strong> for data dimensionality reduction.
+<strong>Principle Components Analysis (PCA)</strong> is one simple but powerful <strong>unsupervised machine learning technique</strong> for data dimensionality reduction.
 It aims to extract a smaller dataset from a large variable set while preserving as much origin information and feature as possible (<strong>lossy compression</strong>). PCA helps identify the most significant and meaningful features in a dataset, making the data easy for visualization. The applications includes: statistical, noise removal, and prepocessing data for machine learning algorihtms.</p>
 <ul>
 <li>What is principle component?<br>
-Principal components are new variables that are constructed as linear combinations of the origin variables. These new variables are uncorrelated and contain the most of the information from the original data.</li>
+<strong>Principal components</strong> are new variables that are constructed as linear combinations of the origin variables. These new variables are uncorrelated and contain the most of the information from the original data.</li>
 </ul>
 <h2 id="2-backgroud-mathmetic-knowledge">2 Backgroud Mathmetic Knowledge</h2>
 <p>Those knowledge is required for next section.</p>
 <ul>
-<li>Orthogonal vector and matrix:
+<li><strong>Orthogonal</strong> vector and matrix:
 <ul>
 <li>Two vectors are orthogonal if they are perpendicular to each other. i.e. the dot product of the two vectors is zero.</li>
 <li>Orthogonal matrix square matrix in which its rows and columns are mutually orthogonal unit vectors; Every two rows and two columns have zero dot product, and every row and every column has a magnitude of one.</li>
@@ -230,29 +230,29 @@ Principal components are new variables that are constructed as linear combinatio
 <li>In robotics, a rotation matrix is typical a $3\times3$ orthogonal matrix, in spatial transformation it rotates vector's direction but keeps the magnitude of origin vector.</li>
 </ul>
 </li>
-<li>Matrix, vector multiplication rules:
+<li>Matrix, vector <strong>multiplication</strong> rules:
 <ul>
 <li>$(AB)^T=B^TA^T$, transpose of the product of two matrices.</li>
-<li>$\vec{a}^T\vec{b}=\vec{b}^T\vec{a}$, both results are scalars, scalar's transpose is same.</li>
-<li>$(A + B)C = AC + BC$, multiplication is distributive.</li>
-<li>$AB \not ={} BA$, multiplication is not commutative.</li>
-<li>$A(BC)=(AB)C$, multiplication is associative.</li>
+<li>$\vec{a}^T\vec{b}=\vec{b}^T\vec{a}$, both sides are multiplication of vector, and results are scalars, scalar's transpose is same.</li>
+<li>$(A + B)C = AC + BC$, matrice's multiplication is distributive.</li>
+<li>$AB \not ={} BA$, matrice's multiplication is not commutative.</li>
+<li>$A(BC)=(AB)C$, matrice's multiplication is associative.</li>
 </ul>
 </li>
-<li>Symmetric matrix:
+<li><strong>Symmetric</strong> matrix:
 <ul>
 <li>$A=A^T$, $A$ is a symmetric matrix.</li>
 <li>$X^TX$ is a symmetric matrix, since $(X^TX)^T=X^TX$.</li>
 </ul>
 </li>
-<li>Vector derivatives rules ($B$ is constant matrix):
+<li>Vector <strong>derivatives</strong> rules ($B$ is constant matrix):
 <ul>
 <li>$d(x^TB)/dx=B$</li>
 <li>$d(x^Tx)/dx=2x$</li>
 <li>$d(x^TBx)/dx=2Bx$</li>
 </ul>
 </li>
-<li>Matrix trace rules:
+<li>Matrix <strong>trace</strong> rules:
 <ul>
 <li>$Tr(A)=Tr(A^T)$</li>
 <li>$Tr(AB)=Tr(BA)$</li>
@@ -260,13 +260,13 @@ Principal components are new variables that are constructed as linear combinatio
 <li>The trace is invariant under circular shifts: $Tr(ABCD)=Tr(BCDA)=Tr(CDAB)=Tr(DABC)$</li>
 </ul>
 </li>
-<li>Vector and matrix norms:
+<li>Vector and matrix <strong>norms</strong>:
 <ul>
 <li>Vector's $L^2$ norm, also known as Euclidean norm: $||x||_2=\sqrt{\sum_i|x_i|^2}$.</li>
 <li>It is also common to measure the size of a vector using the squraed $L^2$ norm, which can be calculated as $x^Tx$.</li>
 <li>Frobenius norm is used to measure the size of a matrix: $||A||<em>F=\sqrt{\sum</em>{i,j}A^2_{i,j}}$</li>
 <li>Frobenius norm is square root of the sum of the absolute squares of all matrix's elements.</li>
-<li>Frobenius norm is the matrix version Euclidean norm.</li>
+<li><strong>Frobenius norm is the matrix version Euclidean norm.</strong></li>
 </ul>
 </li>
 <li>Eigendecomposition and eigenvalue:
@@ -276,7 +276,7 @@ Principal components are new variables that are constructed as linear combinatio
 <li>Every real symmetric matrix can be decompsed into $A=Q\Lambda Q^T$, where $Q$ is an orthogonal matrix composed of eigenvectors of $A$, and $\Lambda$ (pronoucation 'lambda') is a diagnoal matrix.</li>
 </ul>
 </li>
-<li>Lagrange multipliers:
+<li><strong>Lagrange multipliers</strong>:
 <ul>
 <li>Lagrange multipliers is a strategy for finding the local maxima and minima of a function subject to equation constraints.</li>
 <li>General form: $\mathcal{L}(x,\lambda)=f(x)+\lambda\cdot g(x)$, $\lambda$ is called Lagrange multiplier.</li>
@@ -385,6 +385,9 @@ $$X^TXd=\lambda' d,\quad(\lambda'=-\lambda)$$</p>
 <h2 id="4-summary">4 Summary</h2>
 <p>We have a dataset consisting of $m$ points  denoted as ${x^{(1)},...,x^{(m)}}$. Let $X\in \mathbb{R}^{m\times n}$ be defined by stacking all of these points as rows: ${x^{(1)^T}, x^{(2)^T}, \ldots, x^{(i)^T}, \ldots, x^{(m)^T}}$.</p>
 <p>The Principal Component Analysis (PCA) encoding function is represented as $f(x)=D^Tx$, and reconstruction function as $x\approx g(c)=Dc$, where the columns of $D=[d_1, d_2, \ldots]$ are the eigenvectors of $X^TX$ corrresponding the eigenvalues in descending order.</p>
+<blockquote>
+<p>Reconstruction matrix's column vectors are the eigenvectors of $X^TX$, corresponding to  the eigenvalues arranged in descending order.</p>
+</blockquote>
     </div>
 <div class="post_comments">
   
