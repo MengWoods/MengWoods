@@ -205,7 +205,7 @@
     <li><a href="#1-prepare">1. Prepare</a>
       <ul>
         <li><a href="#11-miniconda">1.1 Miniconda</a></li>
-        <li><a href="#12-cuda-toolkit">1.2 CUDA Toolkit</a></li>
+        <li><a href="#12-remove-and-install">1.2 Remove and Install</a></li>
       </ul>
     </li>
     <li><a href="#2-install-dependencies">2. Install dependencies</a></li>
@@ -233,23 +233,31 @@
 </span></span></code></pre></div><p>And initialization:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">~/miniconda3/bin/conda init bash
 </span></span><span class="line"><span class="ln">2</span><span class="cl">~/miniconda3/bin/conda init zsh
-</span></span></code></pre></div><h3 id="12-cuda-toolkit">1.2 CUDA Toolkit</h3>
+</span></span></code></pre></div><h3 id="12-remove-and-install">1.2 Remove and Install</h3>
 <p><a href="https://developer.nvidia.com/cuda-11-6-0-download-archive">CUDA 11.6</a> and Nvidia driver 510.39.01 are recommended in the guide. The Nvidia driver can be installed along with CUDA.</p>
+<h4 id="remove-cuda">Remove Cuda</h4>
 <ul>
 <li>Check cuda version: <code>nvcc --version</code></li>
 <li>Remove cuda:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">sudo apt-get --purge remove <span class="s2">&#34;*cuda*&#34;</span> <span class="s2">&#34;*cublas*&#34;</span> <span class="s2">&#34;*cufft*&#34;</span> <span class="s2">&#34;*cufile*&#34;</span> <span class="s2">&#34;*curand*&#34;</span> <span class="s2">&#34;*cusolver*&#34;</span> <span class="s2">&#34;*cusparse*&#34;</span> <span class="s2">&#34;*gds-tools*&#34;</span> <span class="s2">&#34;*npp*&#34;</span> <span class="s2">&#34;*nvjpeg*&#34;</span> <span class="s2">&#34;nsight*&#34;</span> <span class="s2">&#34;*nvvm*&#34;</span>
 </span></span></code></pre></div></li>
 <li>or <code>sudo /usr/local/cuda-11.x/bin/cuda-uninstaller</code> (replace <code>x</code> with the version of cuda)</li>
+</ul>
+<h4 id="remove-nvidia-driver">Remove Nvidia Driver</h4>
+<ul>
 <li>Check nvidia driver version: <code>nvidia-smi</code></li>
 <li>Remove nvidia driver: <code>sudo /usr/bin/nvidia-uninstall</code> or <code>sudo apt-get --purge remove &quot;*nvidia*&quot; &quot;libxnvctrl*&quot;</code></li>
-<li><code>sudo apt-get autoremove</code></li>
+<li><code>sudo apt-get autoremove</code> (caution)</li>
 </ul>
+<h4 id="installation">Installation</h4>
+<h5 id="option-1">Option 1</h5>
 <p>Install CUDA 11.6 and driver 510.39.01:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wget https://developer.download.nvidia.com/compute/cuda/11.6.0/local_installers/cuda_11.6.0_510.39.01_linux.run
 </span></span><span class="line"><span class="ln">2</span><span class="cl">sudo sh cuda_11.6.0_510.39.01_linux.run
 </span></span></code></pre></div><p>Select the Nvidia driver during CUDA installation in Terminal.</p>
 <p>For other versions, check method from Nvidia toolkit <a href="https://developer.nvidia.com/cuda-toolkit-archive">website</a>.</p>
+<h4 id="option-2">Option 2</h4>
+<p>Open <code>Software &amp; Updates</code>, click <code>Additional Drivers</code>, selecet Nvidia driver and click <code>Apply Changes</code>.</p>
 <h2 id="2-install-dependencies">2. Install dependencies</h2>
 <p>Create a virtual environment:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">conda create --name openmmlab <span class="nv">python</span><span class="o">=</span>3.8 -y
