@@ -9,7 +9,7 @@
   
   >
   <head>
-<title>Menghao blog</title>
+<title>The Fundamental of Deep Learning, Part 2 | Menghao blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,21 +28,21 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="" />
+<meta name="description" content="A Knowledge collection of Deep Learning" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@janedoe">
-<meta name="twitter:title" content="" />
+<meta name="twitter:title" content="The Fundamental of Deep Learning, Part 2" />
 <meta name="twitter:image" content="https://mengwoods.github.io/images/thumbnail.png"/>
-<meta property="og:url" content="https://mengwoods.github.io/archives/" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="https://mengwoods.github.io/post/dl/009-dl-fundamental-2/" />
+<meta property="og:title" content="The Fundamental of Deep Learning, Part 2" />
+<meta property="og:description" content="A Knowledge collection of Deep Learning" />
 <meta property="og:image" content="https://mengwoods.github.io/images/thumbnail.png" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://mengwoods.github.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://mengwoods.github.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://mengwoods.github.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://mengwoods.github.io/archives/">
+<link rel="canonical" href="https://mengwoods.github.io/post/dl/009-dl-fundamental-2/">
 
 
 
@@ -151,7 +151,7 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title"></h1>
+    <h1 class="post_title">The Fundamental of Deep Learning, Part 2</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <title>calendar</title>
@@ -159,19 +159,19 @@
 </svg>
 </span>
     <span class="post_date">
-      May 28, 2019</span>
-    <span class="post_time"> · 0 min read</span>
+      Jul 11, 2024</span>
+    <span class="post_time"> · 4 min read</span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=&url=https%3a%2f%2fmengwoods.github.io%2farchives%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/intent/tweet?text=The%20Fundamental%20of%20Deep%20Learning%2c%20Part%202&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f009-dl-fundamental-2%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>twitter</title>
   <use xlink:href="#twitter"></use>
 </svg>
 
     </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2farchives%2f&t=" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fdl%2f009-dl-fundamental-2%2f&t=The%20Fundamental%20of%20Deep%20Learning%2c%20Part%202" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>facebook</title>
   <use xlink:href="#facebook"></use>
@@ -185,7 +185,7 @@
 </svg>
 
     </a>
-    <a href="https://mengwoods.github.io/archives/" title="Copy Link" class="link link_yank">
+    <a href="https://mengwoods.github.io/post/dl/009-dl-fundamental-2/" title="Copy Link" class="link link_yank">
       <svg class="icon">
   <title>copy</title>
   <use xlink:href="#copy"></use>
@@ -196,7 +196,102 @@
   </span>
   </div>
 
-    <div class="post_body">
+      <div class="post_toc">
+        <h2>Overview</h2>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#activation-function">Activation Function</a></li>
+    <li><a href="#convolutional-neural-networks">Convolutional Neural Networks</a></li>
+    <li><a href="#hyperparameters">Hyperparameters</a></li>
+    <li><a href="#others">Others</a></li>
+    <li><a href="#program">Program</a></li>
+  </ul>
+</nav>
+      </div>
+    
+    <div class="post_body"><p>A Knowledge collection of Deep Learning</p>
+<h2 id="activation-function">Activation Function</h2>
+<ul>
+<li>The purpose of an activation function is to introduce non-linearity into a model, allowing the network to learn and represent complex patterns in the data. List the common activation functions.
+<ul>
+<li>Linear function: $y=x$, is used at just one place, output layer.</li>
+<li>Sigmoid function, S shape graph, $y = 1 / (1 + e^(-x))$. It is non-linear, when X values lies between -2 and 2, Y values are very steep. Y value range is 0 to 1. Usually used in output layer of a binary classification, result in 0 or 1.</li>
+<li>Tanh function, works better than sigmoid function, a.k.a. Taggent hyperbolic function, it's mathematically shifted version of the sigmoid function. $y = tanh(x) = 2/(1+e*(-2x))-1$ or $y = 2*sigmoid(2x)-1$. Value range is -1 to 1. Usually used in hidden layers of a networks, it helps to center the data by bringing mean close to 0.</li>
+<li>ReLU function. Rectified linear unit, most widely used one, chiefly used in hidden layers. $y = max(0,x)$. ReLU is less computationally expensive than tanh and sigmoid since it involves simpler math operations. ReLU learns much faster than sigmoid and Tanh.</li>
+<li>Softmax is also a type of sigmoid function, but it is handy for multiclass classification problems. Usualy used in the output layer of image classfication problems. It is ideally used in the output layer to output probabilities to define the class of each input.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Basic rules: If don't know which one to use, then simply use ReLU. For output layer, binary classification use sigmoid function, multiclass classification use softmax.</p>
+</blockquote>
+<h2 id="convolutional-neural-networks">Convolutional Neural Networks</h2>
+<blockquote>
+<p>CNN is specifically designed to process structured grid data such as images. It learns spatial hierarchies of features so it is effective for tasks like image classfication, object detection, and semantic segmentation.</p>
+</blockquote>
+<ul>
+<li>
+<p>How does the convolutionaly layer work in a CNN?</p>
+<ul>
+<li>It applies a set of filters (kernels) to the input data, each filter slides over the input data, computing dot products. It produces a feature map, which highlights the presence of specific features like edges or textures. The convolution operation is followed by a non-linear activation function.</li>
+</ul>
+</li>
+<li>
+<p>What are the main components of a CNN?</p>
+<ul>
+<li>Input layer: Holds the raw pixel values of the image. Input dimensions typically correspond to the height, width, and color channels.</li>
+<li>Convolutional layer. Important params include the number of filters, filter size, stride, and padding.</li>
+<li>Pooling layer: Reduces the spatial dimensions of the feature maps while retaining the most important information. Common types include Max pooling and average pooling.</li>
+<li>Output layer: produces the output probabilities for each class using activation function like Softmax for multi-class clasification or Sigmoid for binary classification.</li>
+</ul>
+</li>
+<li>
+<p>Introduce some famous CNN networks:</p>
+<ul>
+<li>AlexNet: 2012, layers include 5 conolutional layers, some followed by max-pooling layers, three fully connected layers. Activation uses ReLU.</li>
+<li>VGGNet: 2014. Series of convolutional layers with small receptive fields (3x3), max-pooling layers, and three fully connected layers. Variants VGG16 and VGG19. It showed that the depth of the network is a critical component for high performance.</li>
+</ul>
+</li>
+</ul>
+<h2 id="hyperparameters">Hyperparameters</h2>
+<ul>
+<li>Brief introduce the key hyperparameters in a neural network training session.
+<ul>
+<li>Learning Rate: Control how much to adjust the wieghts in response to the error each time the model is updated. Higher learning rate means bigger steps which can speed up training but might overshoot the optimal solution. Lower rate means smaller steps and precise convergenxe.</li>
+<li>Batch Size: Number of training examples used in one forwaard/backward pass. Larger batch size provides more accurate estimate of the gradient, but reuires more memory. Smaller can lead to noisier estimates but might help generalization.</li>
+<li>Epochs: Number of times the entire training dataset passes through the neural networks. More epochs allow learning better but lead to overfitting.</li>
+<li>Dropout Rate: Regularization technique randomly ignore neurons during training. Determines the proportion of neurons to be dropped out. Typically dropping 20% nodes.</li>
+<li>Learning Rate Decay: Reduce the learning rate as training progresses, helping converge mroe smoothly towards the end of training.</li>
+</ul>
+</li>
+</ul>
+<h2 id="others">Others</h2>
+<ul>
+<li>What is data normalization?
+<ul>
+<li>Standardizing and reforming data, it's a preprocessing step to eliminate data redundancy. Rescale values to fit into a particular range, achieving better convergence.</li>
+</ul>
+</li>
+<li>What is the difference between a feedforward neural network and recurrent neural network?
+<ul>
+<li>Feedforward network signals travel in one direction from input to output, no any feedback loops between layers. It cannot memorize previous inputs.</li>
+<li>A recurrent neural network's signals travel in both directions, creating a looped network. It considers the current input with the previously received inputs for generating the output of a layer and can memorize past data due to its internal memory.</li>
+</ul>
+</li>
+<li>What is batch normalization?
+<ul>
+<li>It is technique to improve the performance and stability of neural networks by normalizng the inputs in every layer so that they have mean output activation of zero aand standard deviation of one.</li>
+</ul>
+</li>
+<li>What is long short term memory network?
+<ul>
+<li>It's a special kind of RNN capable of learning long-term dependencies, remembering information for long periods as its default behaviou.</li>
+</ul>
+</li>
+</ul>
+<h2 id="program">Program</h2>
+<p>Write a simple neural network with PyTorch, include training steps and verification by new input data.</p>
+<p><a href="./pytorch.py">source code</a></p>
     </div>
 <div class="post_comments">
   
@@ -229,129 +324,6 @@
 
 
   </article>
-<aside class="sidebar">
-  <section class="sidebar_inner">
-    <br>
-    
-  
-  <div class="search">
-    <input type="search" class="search_field form_field" placeholder='Search...' id="find" autocomplete="off" data-scope=''>
-    <label for="find" class="search_label"><svg class="icon">
-  <title>search</title>
-  <use xlink:href="#search"></use>
-</svg>
-
-    </label>
-    
-    <div class="search_results results"></div>
-  </div>
-
-        <h2>Menghao</h2>
-      <div class="author_bio">
-        Technologist
-      </div>
-      <a href='https://mengwoods.github.io/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
-
-    
-    
-    <h2 class="mt-4">Recent Posts</h2>
-    <ul class="flex-column">
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/009-dl-fundamental-2/" class="nav-link" title="The Fundamental of Deep Learning, Part 2">The Fundamental of Deep Learning, Part 2</a>
-      </li>
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/009-dl-fundamental/" class="nav-link" title="The Fundamentals of Deep Learning, Part 1">The Fundamentals of Deep Learning, Part 1</a>
-      </li>
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/008-drl-summary/" class="nav-link" title="An Introduction to the Fundamentals of Reinforcement Learning">An Introduction to the Fundamentals of Reinforcement Learning</a>
-      </li>
-    </ul>
-    <div>
-      <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
-      <nav class="tags_nav">
-        <a href='https://mengwoods.github.io/categories/dl/' class="post_tag button button_translucent" title="dl">
-          DL
-          <span class="button_tally">5</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/tech/' class="post_tag button button_translucent" title="tech">
-          TECH
-          <span class="button_tally">5</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/code/' class="post_tag button button_translucent" title="code">
-          CODE
-          <span class="button_tally">4</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/hobby/' class="post_tag button button_translucent" title="hobby">
-          HOBBY
-          <span class="button_tally">4</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/math/' class="post_tag button button_translucent" title="math">
-          MATH
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/investment/' class="post_tag button button_translucent" title="investment">
-          INVESTMENT
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-    <div>
-      <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
-      <nav class="tags_nav">
-        <a href='https://mengwoods.github.io/tags/c&#43;&#43;/' class="post_tag button button_translucent" title="c&#43;&#43;">
-          C&#43;&#43;
-          <span class="button_tally">3</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/docker/' class="post_tag button button_translucent" title="docker">
-          DOCKER
-          <span class="button_tally">2</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/ai/' class="post_tag button button_translucent" title="ai">
-          AI
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/hugo/' class="post_tag button button_translucent" title="hugo">
-          HUGO
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/index/' class="post_tag button button_translucent" title="index">
-          INDEX
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/leetcode/' class="post_tag button button_translucent" title="leetcode">
-          LEETCODE
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/ros2/' class="post_tag button button_translucent" title="ros2">
-          ROS2
-          <span class="button_tally">1</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/tags/web/' class="post_tag button button_translucent" title="web">
-          WEB
-          <span class="button_tally">1</span>
-        </a>
-        
-        
-      </nav>
-    </div>
-  </section>
-</aside>
-
-  
 </div>
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
