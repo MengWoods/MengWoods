@@ -82,7 +82,7 @@ def main(mode='train'):
     num_classes = 10
     batch_size = 64
     learning_rate = 0.001
-    num_epochs = 500
+    num_epochs = 200
     
     # Generate synthetic data
     inputs, targets = generate_synthetic_data(num_samples, input_dim, num_classes)
