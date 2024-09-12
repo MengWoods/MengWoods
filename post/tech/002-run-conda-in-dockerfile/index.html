@@ -162,7 +162,7 @@
 </span>
     <span class="post_date">
       Mar 28, 2024</span>
-    <span class="post_time"> · 4 min read</span><span>&nbsp;· <a href='https://mengwoods.github.io/tags/docker/' title="Docker" class="post_tag button button_translucent">Docker
+    <span class="post_time"> · 5 min read</span><span>&nbsp;· <a href='https://mengwoods.github.io/tags/docker/' title="Docker" class="post_tag button button_translucent">Docker
         </a>
     </span>
     <span class="page_only">&nbsp;·
@@ -206,7 +206,7 @@
   <ul>
     <li><a href="#keywords">Keywords</a></li>
     <li><a href="#dockerfile-with-conda">Dockerfile with Conda</a></li>
-    <li><a href="#dockerfile-with-specified-python-version">Dockerfile with specified Python version</a></li>
+    <li><a href="#dockerfile-with-specified-python-version-37">Dockerfile with specified Python version 3.7</a></li>
   </ul>
 </nav>
       </div>
@@ -289,7 +289,7 @@
 </span></span></span><span class="line"><span class="ln">49</span><span class="cl"><span class="w">    </span><span class="l">source ~/.bashrc &amp;&amp; \</span><span class="w">
 </span></span></span><span class="line"><span class="ln">50</span><span class="cl"><span class="w">    </span><span class="l">roslaunch --wait /app/install/ganav_terrain_segmentation/share/ganav_terrain_segmentation/launch/ganav_terrain_segmentation.launch&#34; ]</span><span class="w">
 </span></span></span></code></pre></div><p>Known issue: the launched docker with a docker-compose file can only activate the base conda environment.</p>
-<h2 id="dockerfile-with-specified-python-version">Dockerfile with specified Python version</h2>
+<h2 id="dockerfile-with-specified-python-version-37">Dockerfile with specified Python version 3.7</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="l">ARG ARCH_IMG</span><span class="w">
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w"></span><span class="l">ARG CI_PROJECT_DIR</span><span class="w">
 </span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w"></span><span class="l">FROM $ARCH_IMG</span><span class="w">
@@ -359,6 +359,43 @@
 </span></span></span><span class="line"><span class="ln">67</span><span class="cl"><span class="w">    </span><span class="l">source install/setup_deps.bash &amp;&amp; \</span><span class="w">
 </span></span></span><span class="line"><span class="ln">68</span><span class="cl"><span class="w">    </span><span class="l">roslaunch --wait ${env_package} ${env_launchfile}&#34; ]</span><span class="w">
 </span></span></span></code></pre></div><p>The Docker image uses Python3.7 instead of default version which usually Python 3.8.</p>
+<p>Saved Docker script, install python3.7 and use pip3.7 as default.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># RUN apt-get update &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c1">#      # Install system dependencies</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1">#      apt-get install -y wget libxext6 ffmpeg libsm6 libffi-dev &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1">#      # Install Python 3.7</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1">#      apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev \</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="c1">#      libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev liblzma-dev &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1">#      cd /usr/src &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1">#      wget https://www.python.org/ftp/python/3.7.17/Python-3.7.17.tgz &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1">#      tar xzf Python-3.7.17.tgz &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1">#      cd Python-3.7.17 &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1">#      ./configure --enable-optimizations &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c1">#      make altinstall &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1">#      # Link Python and Python3 to Python3.7</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="c1">#      ln -s -f /usr/local/bin/python3.7 /usr/local/bin/python &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c1">#      rm /usr/bin/python3 &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c1">#      ln -s /usr/local/bin/python3.7 /usr/bin/python3 &amp;&amp;\</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="c1">#      # Install Python 3.7 pip</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c1">#      curl https://bootstrap.pypa.io/pip/3.7/get-pip.py -o get-pip.py &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="c1">#      python3.7 get-pip.py &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="c1">#      ln -s -f /usr/local/bin/pip3.7 /usr/local/bin/pip &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="c1">#      # Install pip requirements</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c1">#      pip3.7 install --upgrade pip &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="c1">#      pip3.7 install netifaces==0.11.0 matplotlib==3.5.3 cv_bridge rospkg==1.5.1 prettytable==3.7.0 einops==0.6.1 \</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c1">#      backports.lzma defusedxml ftfy==6.1.1 regex==2024.4.16 &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="c1">#      pip3.7 install torch torchvision torchaudio --force-reinstall  --extra-index-url https://download.pytorch.org/whl/cu116 &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="c1">#      # Install mmcv, mmsegmentation</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="c1">#      pip3.7 install mmcv==2.0.0rc4 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10/index.html &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="c1">#      pip3.7 install mmsegmentation==1.2.2 &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="c1">#      # Install mmcv from source code</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="c1">#      # cd ~ &amp;&amp; git clone https://github.com/open-mmlab/mmcv.git &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="c1">#      # cd mmcv &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="c1">#      # git checkout v1.3.16 &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="c1">#      # MMCV_WITH_OPS=1 pip install -e . &amp;&amp; \</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="c1">#      # Remove the file to be replaced</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="c1">#      rm /usr/local/lib/python3.7/lzma.py</span>
+</span></span></code></pre></div>
     </div>
 <div class="post_comments">
   
@@ -429,18 +466,23 @@
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       <li>
+        <a href="https://mengwoods.github.io/post/code/005-cuda-programming/" class="nav-link" title="Cuda Programming">Cuda Programming</a>
+      </li>
+      <li>
         <a href="https://mengwoods.github.io/post/dl/009-dl-fundamental-2/" class="nav-link" title="The Fundamental of Deep Learning, Part 2">The Fundamental of Deep Learning, Part 2</a>
       </li>
       <li>
         <a href="https://mengwoods.github.io/post/dl/009-dl-fundamental/" class="nav-link" title="The Fundamentals of Deep Learning, Part 1">The Fundamentals of Deep Learning, Part 1</a>
       </li>
-      <li>
-        <a href="https://mengwoods.github.io/post/dl/008-drl-summary/" class="nav-link" title="An Introduction to the Fundamentals of Reinforcement Learning">An Introduction to the Fundamentals of Reinforcement Learning</a>
-      </li>
     </ul>
     <div>
       <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
       <nav class="tags_nav">
+        <a href='https://mengwoods.github.io/categories/code/' class="post_tag button button_translucent" title="code">
+          CODE
+          <span class="button_tally">5</span>
+        </a>
+        
         <a href='https://mengwoods.github.io/categories/dl/' class="post_tag button button_translucent" title="dl">
           DL
           <span class="button_tally">5</span>
@@ -449,11 +491,6 @@
         <a href='https://mengwoods.github.io/categories/tech/' class="post_tag button button_translucent" title="tech">
           TECH
           <span class="button_tally">5</span>
-        </a>
-        
-        <a href='https://mengwoods.github.io/categories/code/' class="post_tag button button_translucent" title="code">
-          CODE
-          <span class="button_tally">4</span>
         </a>
         
         <a href='https://mengwoods.github.io/categories/hobby/' class="post_tag button button_translucent" title="hobby">
@@ -489,6 +526,11 @@
         
         <a href='https://mengwoods.github.io/tags/ai/' class="post_tag button button_translucent" title="ai">
           AI
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://mengwoods.github.io/tags/cuda/' class="post_tag button button_translucent" title="cuda">
+          CUDA
           <span class="button_tally">1</span>
         </a>
         

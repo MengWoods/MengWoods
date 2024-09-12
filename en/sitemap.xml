@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mengwoods.github.io/post/code/005-cuda-programming/</loc>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/post/dl/009-dl-fundamental-2/</loc>
     <lastmod>2024-07-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -134,7 +137,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/</loc>
-    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -146,11 +149,40 @@
                 href="https://mengwoods.github.io/"
                 />
   </url><url>
+    <loc>https://mengwoods.github.io/categories/</loc>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/categories/code/</loc>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/code/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/tags/cuda/</loc>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/tags/index/</loc>
-    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/post/</loc>
-    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -163,7 +195,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/tags/</loc>
-    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -173,19 +205,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://mengwoods.github.io/tags/"
-                />
-  </url><url>
-    <loc>https://mengwoods.github.io/categories/</loc>
-    <lastmod>2024-07-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/categories/"
                 />
   </url><url>
     <loc>https://mengwoods.github.io/categories/dl/</loc>
@@ -251,19 +270,6 @@
   </url><url>
     <loc>https://mengwoods.github.io/tags/c&#43;&#43;/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mengwoods.github.io/categories/code/</loc>
-    <lastmod>2024-03-14T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/categories/code/"
-                />
   </url><url>
     <loc>https://mengwoods.github.io/tags/leetcode/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
