@@ -7,23 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cuda Programming</title>
-      <link>https://mengwoods.github.io/post/code/005-cuda-programming/</link>
-      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mengwoods.github.io/post/code/005-cuda-programming/</guid>
-      <description>
-        
-          
-            &lt;p&gt;CUDA programming&lt;/p&gt;
-          
-          
-        
-      </description>
-    </item>
-    
+    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Boost::geometry Polygon operations (C&#43;&#43;)</title>
       <link>https://mengwoods.github.io/post/code/003-polygon-operation/</link>
