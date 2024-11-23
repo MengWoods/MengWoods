@@ -113,7 +113,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -125,21 +125,21 @@
                 href="https://mengwoods.github.io/cn/categories/"
                 />
   </url><url>
-    <loc>https://mengwoods.github.io/cn/categories/dl/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+    <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://mengwoods.github.io/categories/dl/"
+                href="https://mengwoods.github.io/categories/hobby/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/dl/"
+                href="https://mengwoods.github.io/cn/categories/hobby/"
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -152,7 +152,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/post/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -162,6 +162,22 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://mengwoods.github.io/cn/post/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/post/wechat/2024-11-20-same-as-ever/cn/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/categories/dl/</loc>
+    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/dl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/dl/"
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/math/</loc>
@@ -192,19 +208,6 @@
   </url><url>
     <loc>https://mengwoods.github.io/cn/post/hobby/2023-12-08-grain-brain/</loc>
     <lastmod>2023-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
-    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/categories/hobby/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/hobby/"
-                />
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/reading/</loc>
     <lastmod>2023-12-08T00:00:00+00:00</lastmod>
