@@ -112,6 +112,32 @@
                 href="https://mengwoods.github.io/cn/post/tech/000-build-hugo-site/en/"
                 />
   </url><url>
+    <loc>https://mengwoods.github.io/cn/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/post/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/post/"
+                />
+  </url><url>
     <loc>https://mengwoods.github.io/cn/categories/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -136,32 +162,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://mengwoods.github.io/cn/categories/hobby/"
-                />
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/"
-                />
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/post/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/post/"
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/post/hobby/2024-11-20-same-as-ever/</loc>
