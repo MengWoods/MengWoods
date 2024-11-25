@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mengwoods.github.io/cn/post/wechat/2024-11-24-cheapest-etf-in-europe/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/post/wechat/2024-11-20-same-as-ever/</loc>
+    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/cn/post/dl/008-drl-summary/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -112,6 +118,32 @@
                 href="https://mengwoods.github.io/cn/post/tech/000-build-hugo-site/en/"
                 />
   </url><url>
+    <loc>https://mengwoods.github.io/cn/categories/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/"
+                />
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mengwoods.github.io/categories/hobby/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://mengwoods.github.io/cn/categories/hobby/"
+                />
+  </url><url>
     <loc>https://mengwoods.github.io/cn/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -137,35 +169,6 @@
                 hreflang="cn"
                 href="https://mengwoods.github.io/cn/post/"
                 />
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/categories/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/"
-                />
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mengwoods.github.io/categories/hobby/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://mengwoods.github.io/cn/categories/hobby/"
-                />
-  </url><url>
-    <loc>https://mengwoods.github.io/cn/post/hobby/2024-11-20-same-as-ever/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/dl/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
