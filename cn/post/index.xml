@@ -7,7 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2024, Meng blog; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mengwoods.github.io/cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我对比了支付宝上的几个标普500</title>
+      <link>https://mengwoods.github.io/cn/post/wechat/2024-12-06-sp500-in-alipay/cn/</link>
+      <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengwoods.github.io/cn/post/wechat/2024-12-06-sp500-in-alipay/cn/</guid>
+      <description>
+        
+          
+            一个前提，如果你有条件在美国、欧洲等地投资，那么优先考虑这些地区的相关基金。
+在欧洲的投资者可以参考我的这几篇文章：
+这是欧洲最划算的标普500指数基金
+在芬兰定期投资一年标普500，收益如何？
+标普500适合投资吗？ 请参考我的这篇文章：标普500指数基金真的适合你吗？
+国内基金有什么异同？ 国外的标普500指数基金更多以ETF和共同基金的形式存在，费用率极低（与国内同类基金相差十倍以上），交易像股票般灵活，且复制指数的精度更高，误差极小，但投资者需自行承担税务处理等复杂性。
+在国内，追踪标普500指数的基金通常以QDII（合格境内机构投资者）形式存在，投资途径间接，管理费和汇率风险较高，同时受限于外汇额度，申购灵活性较弱。然而，它提供了以人民币参与全球化投资的便捷通道，并且都是追踪同样的美国标普500指数，仍然是优质的长期投资选择。
+还有的基金以QDII-FOF形式存在，是合格境内机构投资者-基金中的基金，是一种通过投资于其他海外基金（即基金中的基金）来间接进入海外资本市场的投资产品。
+国内基金的费率构成 管理费：这是QDII基金常见的收费项目，用于支付基金公司管理资产的费用。
+托管费：一些QDII基金还会收取托管费，主要用于支付基金资产的托管费用。
+申购、赎回费：部分基金可能收取一定比例的手续费，用于管理基金的流动性。申购费率一般较低，赎回费则随着持有时间的增加而逐渐减少。
+具体基金评比 首先，这些基金通常分为 A 类和 C 类两种，两者的主要区别在于收费方式：
+A 类份额：更适合长期投资者（投资时间超过一年），因为它的申购费用通常较低，而赎回费用随时间递减。 C 类份额：更适合短期投资者（投资时间少于一年），因其不收取申购费，但每日管理费稍高。 除收费差异外，A 类和 C 类份额在投资标的和运作上没有其他区别。以下评比主要针对 A 类基金，并仅涵盖目前在支付宝上可开放购买的基金产品。
+他们分别是：
+摩根标普500指数(QDII)人民币A(017641)
+博时标普500ETF联接A(050025)
+天弘标普500发起(QDII-FOF)A(007721)
+易方达标普500指数人民币A(161125)
+摩根标普500（017641）费用较低、限额低，适合小额投资者；
+博时标普500（050025）规模最大、历史最久，稳定性高；
+天弘标普500（007721）费用最低、限额高，灵活性强；
+易方达标普500（161125）费用最高、跟踪误差最低、晨星评级最高，长期表现优异。
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Facebook上的骗子是如何盗取你银行卡信息的</title>
       <link>https://mengwoods.github.io/cn/post/wechat/2024-12-02-fraud/</link>
