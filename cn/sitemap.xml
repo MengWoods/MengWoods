@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mengwoods.github.io/cn/post/wechat/2024-12-10-report-captal-gain/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mengwoods.github.io/cn/post/wechat/2024-12-06-gift-tax/</loc>
     <lastmod>2024-12-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -137,7 +140,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -150,7 +153,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/post/</loc>
-    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -163,7 +166,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/</loc>
-    <lastmod>2024-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -176,7 +179,7 @@
                 />
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/hobby/</loc>
-    <lastmod>2024-12-07T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -295,6 +298,8 @@
   </url><url>
     <loc>https://mengwoods.github.io/cn/categories/web/</loc>
     <lastmod>2023-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mengwoods.github.io/cn/post/wechat/zixun/</loc>
   </url><url>
     <loc>https://mengwoods.github.io/cn/series/</loc>
     <xhtml:link
