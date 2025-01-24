@@ -4,10 +4,12 @@
   lang="en"
   data-figures=""
   
+    class="page"
+  
   
   >
   <head>
-<title>Math | Menghao blog</title>
+<title>TensorRT Installation Guide | Menghao blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,25 +27,22 @@
 
 <meta property="og:locale" content="en" />
 
-<meta property="og:locale:alternate" content="cn" />
-
 <meta property="og:type" content="article">
-<meta name="description" content="" />
+<meta name="description" content="TensorRT Installation Guide" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@janedoe">
-<meta name="twitter:title" content="Math" />
+<meta name="twitter:title" content="TensorRT Installation Guide" />
 <meta name="twitter:image" content="https://mengwoods.github.io/images/thumbnail.png"/>
-<meta property="og:url" content="https://mengwoods.github.io/categories/math/" />
-<meta property="og:title" content="Math" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="https://mengwoods.github.io/post/tech/008-tensorrt-installation/" />
+<meta property="og:title" content="TensorRT Installation Guide" />
+<meta property="og:description" content="TensorRT Installation Guide" />
 <meta property="og:image" content="https://mengwoods.github.io/images/thumbnail.png" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://mengwoods.github.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://mengwoods.github.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://mengwoods.github.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://mengwoods.github.io/categories/math/">
-<link rel="alternate" type="application/rss+xml" href="https://mengwoods.github.io/categories/math/index.xml" title="Menghao blog" />
+<link rel="canonical" href="https://mengwoods.github.io/post/tech/008-tensorrt-installation/">
 
 
 
@@ -93,7 +92,7 @@
   <div class="nav_parent">
     <a href="https://mengwoods.github.io/" class="nav_item" title="Home">Home </a>
   </div>
-  <div class="nav_parent nav_active">
+  <div class="nav_parent">
     <a href="https://mengwoods.github.io/categories/math/" class="nav_item" title="Math">Math </a>
   </div>
   <div class="nav_parent">
@@ -149,19 +148,10 @@
 </header>
 
     <main>
-
-
-
+  
 <div class="grid-inverse wrap content">
-  <div>
-    <ul class="posts" id="posts">
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://mengwoods.github.io/post/math/003-pca-application/" title="Principle Components Analysis (PCA) application">Principle Components Analysis (PCA) application</a>
-      </h3>
-      
+  <article class="post_content">
+    <h1 class="post_title">TensorRT Installation Guide</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <title>calendar</title>
@@ -169,19 +159,21 @@
 </svg>
 </span>
     <span class="post_date">
-      Apr 16, 2024</span>
-    <span class="post_time"> · 8 min read</span>
+      Jan 24, 2025</span>
+    <span class="post_time"> · 2 min read</span><span>&nbsp;· <a href='https://mengwoods.github.io/tags/nvidia/' title="nvidia" class="post_tag button button_translucent">nvidia
+        </a>
+    </span>
     <span class="page_only">&nbsp;·
   <div class="post_share">
     Share on:
-    <a href="https://twitter.com/intent/tweet?text=Principle%20Components%20Analysis%20%28PCA%29%20application&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca-application%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <a href="https://twitter.com/intent/tweet?text=TensorRT%20Installation%20Guide&url=https%3a%2f%2fmengwoods.github.io%2fpost%2ftech%2f008-tensorrt-installation%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>twitter</title>
   <use xlink:href="#twitter"></use>
 </svg>
 
     </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca-application%2f&t=Principle%20Components%20Analysis%20%28PCA%29%20application" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2ftech%2f008-tensorrt-installation%2f&t=TensorRT%20Installation%20Guide" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
       <svg class="icon">
   <title>facebook</title>
   <use xlink:href="#facebook"></use>
@@ -195,7 +187,7 @@
 </svg>
 
     </a>
-    <a href="https://mengwoods.github.io/post/math/003-pca-application/" title="Copy Link" class="link link_yank">
+    <a href="https://mengwoods.github.io/post/tech/008-tensorrt-installation/" title="Copy Link" class="link link_yank">
       <svg class="icon">
   <title>copy</title>
   <use xlink:href="#copy"></use>
@@ -206,158 +198,142 @@
   </span>
   </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            Application example
-          
-          <br>
-          <a href="https://mengwoods.github.io/post/math/003-pca-application/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
+      <div class="post_toc">
+        <h2>Overview</h2>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before-installation-optional">Before Installation (Optional)</a></li>
+    <li><a href="#install-nvidia-driver">Install NVIDIA Driver</a></li>
+    <li><a href="#cuda-v122">CUDA v12.2</a></li>
+    <li><a href="#cudnn-v897">cuDNN v8.9.7</a></li>
+    <li><a href="#tensorrt-v108">TensorRT v10.8</a></li>
+  </ul>
+</nav>
       </div>
+    
+    <div class="post_body"><p>TensorRT Installation Guide</p>
+<blockquote>
+<p>Ubuntu 22.04 <br>
+Nvidia Driver 538.78 <br>
+CUDA 12.2 <br>
+cuDNN 8.9.7 <br>
+TensorRT 10.8</p>
+</blockquote>
+<h2 id="before-installation-optional">Before Installation (Optional)</h2>
+<p>Remove existing NVIDIA drivers, CUDA, cuDNN, and TensorRT to avoid conflicts.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">sudo apt remove --purge <span class="s1">&#39;^nvidia-.*&#39;</span> <span class="s1">&#39;^cuda.*&#39;</span> <span class="s1">&#39;^libcuda.*&#39;</span> <span class="s1">&#39;^libnvidia.*&#39;</span> <span class="s1">&#39;^tensorrt.*&#39;</span> <span class="s1">&#39;^cudnn.*&#39;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">sudo apt autoremove -y
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">sudo apt clean
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># Remove CUDA Toolkit and Related Files</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">sudo rm -rf /usr/local/cuda*
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">sudo rm -rf /usr/lib/cuda*
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># Remove NVIDIA Repository (If Installed)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">sudo rm -f /etc/apt/sources.list.d/cuda*
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">sudo rm -f /etc/apt/sources.list.d/nvidia-*
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1"># update your package lis</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">sudo apt update
+</span></span></code></pre></div><p>Verify uninstallation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">dpkg -l <span class="p">|</span> grep -E <span class="s1">&#39;cuda|nvidia|tensorrt|cudnn&#39;</span>
+</span></span></code></pre></div><p>After removing the drivers and CUDA-related packages, reboot the system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">sudo reboot
+</span></span></code></pre></div><p>Verify uninstallation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Check Nvidia driver</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">nvidia-smi
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># check CUDA</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">which nvcc
+</span></span></code></pre></div><h2 id="install-nvidia-driver">Install NVIDIA Driver</h2>
+<blockquote>
+<p><a href="https://www.nvidia.com/en-us/drivers/">https://www.nvidia.com/en-us/drivers/</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># install the latest supported driver</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">sudo ubuntu-drivers autoinstall
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># install the specific version</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">sudo apt install nvidia-driver-xxx
+</span></span></code></pre></div><h2 id="cuda-v122">CUDA v12.2</h2>
+<p>Select the model from the website and get instruction:
+<a href="https://developer.nvidia.com/cuda-12-2-0-download-archive">https://developer.nvidia.com/cuda-12-2-0-download-archive</a></p>
+<p>Or use below for Ubuntu 22.04 x86_64 architecture.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+</span></span><span class="line"><span class="ln">2</span><span class="cl">sudo dpkg -i cuda-keyring_1.1-1_all.deb
+</span></span><span class="line"><span class="ln">3</span><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="ln">4</span><span class="cl">sudo apt-get -y install cuda
+</span></span><span class="line"><span class="ln">5</span><span class="cl">sudo apt-get install nvidia-cuda-toolkit
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Update cuda path to .bashrc</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=/usr/local/cuda-12.8/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># verification</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">nvcc --version
+</span></span></code></pre></div><h2 id="cudnn-v897">cuDNN v8.9.7</h2>
+<p>Download the relevant <code>.deb</code> file from the website:
+<a href="https://developer.nvidia.com/rdp/cudnn-archive">https://developer.nvidia.com/rdp/cudnn-archive</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># install repository</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">sudo dpkg -i cudnn-local-repo-ubuntu2004-8.9.7.29_1.0-1_amd64.deb
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># copy keyring [switch to your folder name after /var/]</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">sudo cp /var/cudnn-local-repo-ubuntu2004-8.9.7.29/cudnn-*-keyring.gpg /usr/share/keyrings/
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># update and install</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="ln">7</span><span class="cl">sudo apt-get install libcudnn8
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># verify installation</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl">dpkg -l <span class="p">|</span> grep cudnn
+</span></span></code></pre></div><h2 id="tensorrt-v108">TensorRT v10.8</h2>
+<p>Download <code>.deb</code> from website:
+<a href="https://developer.nvidia.com/tensorrt-getting-started">https://developer.nvidia.com/tensorrt-getting-started</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># install repository</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">sudo dpkg -i nv-tensorrt-local-repo-ubuntu2204-10.8.0-cuda-12.8_1.0-1_amd64.deb
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1"># copy keyring</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">sudo cp /var/nv-tensorrt-local-repo-ubuntu2204-10.8.0-cuda-12.8/nv-tensorrt-local-*.gpg /usr/share/keyrings/
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># update package list</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># install tensorrt</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">sudo apt-get install tensorrt
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># Add path</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=$PATH:/usr/src/tensorrt/bin&#39;</span> &gt;&gt; ~/.bashrc <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c1"># verification</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">dpkg -l <span class="p">|</span> grep nvinfer
+</span></span><span class="line"><span class="ln">14</span><span class="cl">sudo apt show tensorrt
+</span></span><span class="line"><span class="ln">15</span><span class="cl">trtexec --version
+</span></span></code></pre></div>
     </div>
-  </li>
+<div class="post_comments">
+  
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-mengwoods-github-io-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+  
+</div>
 
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://mengwoods.github.io/post/math/003-pca/" title="Detailed Deep Derivation of Principle Components Analysis (PCA)">Detailed Deep Derivation of Principle Components Analysis (PCA)</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      Apr 11, 2024</span>
-    <span class="post_time"> · 8 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=Detailed%20Deep%20Derivation%20of%20Principle%20Components%20Analysis%20%28PCA%29&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>twitter</title>
-  <use xlink:href="#twitter"></use>
-</svg>
 
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f003-pca%2f&t=Detailed%20Deep%20Derivation%20of%20Principle%20Components%20Analysis%20%28PCA%29" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>facebook</title>
-  <use xlink:href="#facebook"></use>
-</svg>
 
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <title>linkedin</title>
-  <use xlink:href="#linkedin"></use>
-</svg>
 
-    </a>
-    <a href="https://mengwoods.github.io/post/math/003-pca/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <title>copy</title>
-  <use xlink:href="#copy"></use>
-</svg>
-
-    </a>
-  </div>
-  </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            Based on <em>Deep Learning (2017, MIT)</em> book.
-          
-          <br>
-          <a href="https://mengwoods.github.io/post/math/003-pca/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-        <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://mengwoods.github.io/post/math/001-vector-cross-product/" title="Vector Cross Product and Dot Product">Vector Cross Product and Dot Product</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <title>calendar</title>
-  <use xlink:href="#calendar"></use>
-</svg>
-</span>
-    <span class="post_date">
-      Mar 5, 2024</span>
-    <span class="post_time"> · 2 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=Vector%20Cross%20Product%20and%20Dot%20Product&url=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f001-vector-cross-product%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>twitter</title>
-  <use xlink:href="#twitter"></use>
-</svg>
-
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmengwoods.github.io%2fpost%2fmath%2f001-vector-cross-product%2f&t=Vector%20Cross%20Product%20and%20Dot%20Product" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <title>facebook</title>
-  <use xlink:href="#facebook"></use>
-</svg>
-
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <title>linkedin</title>
-  <use xlink:href="#linkedin"></use>
-</svg>
-
-    </a>
-    <a href="https://mengwoods.github.io/post/math/001-vector-cross-product/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <title>copy</title>
-  <use xlink:href="#copy"></use>
-</svg>
-
-    </a>
-  </div>
-  </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div class="pale">
-          
-            Introduce vector mutiplication with applications.
-          
-          <br>
-          <a href="https://mengwoods.github.io/post/math/001-vector-cross-product/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li>
-      </li>
-    </ul>
-  </div>
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     <br>
     
   
   <div class="search">
-    <input type="search" class="search_field form_field" placeholder='Search...' id="find" autocomplete="off" data-scope='categories'>
+    <input type="search" class="search_field form_field" placeholder='Search...' id="find" autocomplete="off" data-scope='post'>
     <label for="find" class="search_label"><svg class="icon">
   <title>search</title>
   <use xlink:href="#search"></use>
@@ -478,9 +454,8 @@
   </section>
 </aside>
 
+  
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
