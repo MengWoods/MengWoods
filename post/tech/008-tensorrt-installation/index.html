@@ -206,7 +206,7 @@
     <li><a href="#install-nvidia-driver">Install NVIDIA Driver</a></li>
     <li><a href="#cuda-v122">CUDA v12.2</a></li>
     <li><a href="#cudnn-v897">cuDNN v8.9.7</a></li>
-    <li><a href="#tensorrt-v108">TensorRT v10.8</a></li>
+    <li><a href="#tensorrt-v107">TensorRT v10.7</a></li>
   </ul>
 </nav>
       </div>
@@ -217,7 +217,7 @@
 Nvidia Driver 538.78 <br>
 CUDA 12.2 <br>
 cuDNN 8.9.7 <br>
-TensorRT 10.8</p>
+TensorRT 10.7</p>
 </blockquote>
 <h2 id="before-installation-optional">Before Installation (Optional)</h2>
 <p>Remove existing NVIDIA drivers, CUDA, cuDNN, and TensorRT to avoid conflicts.</p>
@@ -276,13 +276,13 @@ TensorRT 10.8</p>
 </span></span><span class="line"><span class="ln">7</span><span class="cl">sudo apt-get install libcudnn8
 </span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># verify installation</span>
 </span></span><span class="line"><span class="ln">9</span><span class="cl">dpkg -l <span class="p">|</span> grep cudnn
-</span></span></code></pre></div><h2 id="tensorrt-v108">TensorRT v10.8</h2>
+</span></span></code></pre></div><h2 id="tensorrt-v107">TensorRT v10.7</h2>
 <p>Download <code>.deb</code> from website:
 <a href="https://developer.nvidia.com/tensorrt-getting-started">https://developer.nvidia.com/tensorrt-getting-started</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># install repository</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">sudo dpkg -i nv-tensorrt-local-repo-ubuntu2204-10.8.0-cuda-12.8_1.0-1_amd64.deb
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1"># copy keyring</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">sudo cp /var/nv-tensorrt-local-repo-ubuntu2204-10.8.0-cuda-12.8/nv-tensorrt-local-*.gpg /usr/share/keyrings/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># install repository [check name]</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">sudo dpkg -i nv-tensorrt-local-repo-ubuntu2204-10.7.0-cuda-12.6_1.0-1_amd64.deb
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c1"># copy keyring [check name]</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">sudo cp /var/nv-tensorrt-local-repo-ubuntu2204-10.7.0-cuda-12.6/nv-tensorrt-local-F234AD55-keyring.gpg /usr/share/keyrings/
 </span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># update package list</span>
 </span></span><span class="line"><span class="ln"> 6</span><span class="cl">sudo apt-get update
 </span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># install tensorrt</span>
