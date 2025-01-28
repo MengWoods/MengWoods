@@ -257,11 +257,6 @@ TensorRT 10.7</p>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">sudo dpkg -i cuda-keyring_1.1-1_all.deb
 </span></span><span class="line"><span class="ln">3</span><span class="cl">sudo apt-get update
 </span></span><span class="line"><span class="ln">4</span><span class="cl">sudo apt-get -y install cuda
-</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># Update path</span>
-</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=/usr/local/cuda-12.8/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
-</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH&#39;</span> &gt;&gt; ~/.bashrc
-</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export CUDA_HOME=/usr/local/cuda-12.8&#39;</span> &gt;&gt; ~/.bashrc
-</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="nb">source</span> ~/.bashrc
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Update cuda path to .bashrc</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=/usr/local/cuda-12.8/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH&#39;</span> &gt;&gt; ~/.bashrc
